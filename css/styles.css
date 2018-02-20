@@ -256,17 +256,20 @@ iframe{
 .aligner-top{align-self: flex-start;}
 .aligner-bottom{align-self: flex-end;}
 
-.title {
+.title-block {
     position: absolute;
-    float: left;
     top: 50%;
     left: 50%;
-    width:100%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
     color:white;
     font-family: 'Sofia', cursive;
-    font-size: 9vw;
-    text-align-last: center;
+    font-size: 8vw;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
 }
 
+.date {
+    text-align: center
+}
