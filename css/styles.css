@@ -288,12 +288,16 @@ iframe{
 
 .mobile-menu{
     display: none;
-    width:26px;
-    height:26px;
     position:fixed;
-    right:30px;
-    top:30px;
+    right:20px;
+    top:20px;
     z-index:2;
+    padding: 20px;
+}
+
+.mobile-menu img {
+    width:36px;
+    height:36px;
 }
 
 @media screen and (max-width: 600px) {
@@ -312,7 +316,7 @@ iframe{
         z-index:1;
     }
     
-    .mobile-menu{
+    .mobile-menu {
         display:block !important;
     }
     
