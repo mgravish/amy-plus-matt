@@ -70,6 +70,9 @@ $('#submit-form').on('click', function(e) {
 $(document).ready(function() { // better to use $(document).ready(function(){
     var navdown = false;
     $('.mobile-menu').on('touchend click', function() {
+            if(e.type == 'touchend'){
+                $(this).off('click');
+            }
             if(!navdown){
             $('.nav-container').animate({
                 top: "+=280"
