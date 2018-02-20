@@ -46,7 +46,6 @@ $('.jams').click( function() {
     }
 });
 
-
 var $form = $('form#rsvp-form');
 var url = 'https://script.google.com/macros/s/AKfycbxiFy960d1e8dLsEAVOxD5pEOIlXrlCvZ0FzYawNr3-fbm73Fq-/exec';
 
@@ -62,6 +61,8 @@ $('#submit-form').on('click', function(e) {
             $(btn).attr("disabled","disabled");
             $(btn).css({ border:"none", cursor: "auto", color: "gray"});
             $(btn).html("Thanks!");
+            $('#rsvp-form').find("input[type=text], textarea").prop("readonly",true);
+            $('#rsvp-form').find("input[type=text], textarea").css({ background:"#fcfcfc" });
         }    
     });
 });
