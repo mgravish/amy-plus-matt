@@ -22,16 +22,21 @@ body {
     width:100%;
     background-color: white;
     left: 50%;
+    -webkit-transform: translate(-50%);
     transform: translate(-50%);
     z-index: 1;
 }
 
 .nav-items {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     position: relative;
     top:50%;
+    -webkit-transform: translate(0%,-50%);
     transform: translate(0%,-50%);
 }
 
@@ -63,8 +68,11 @@ a {
     position:relative;
     height:550px;
     width:100%;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -102,8 +110,7 @@ button{
     border: 1px solid black;
     border-radius: 2px;
     letter-spacing: .07em;
-    cursor: pointer;
-    -webkit-transition: border, color .2s; /* Safari */
+    cursor: pointer; /* Safari */
     transition: border, color .2s;
 }
 
@@ -120,14 +127,19 @@ h1 {
     padding-bottom: 4px;
     margin-top:0px;
     margin-bottom: 20px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
 p {
     display: block;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
@@ -196,8 +208,11 @@ input, textarea {
 }
 
 .form{
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     position: relative;
     width:100%;
@@ -225,6 +240,7 @@ input, textarea {
     overflow: hidden;
     position: absolute;
     left: 50%;
+    -webkit-transform: translate(-50%);
     transform: translate(-50%);
 }
 
@@ -246,10 +262,7 @@ iframe{
     top: 50%;
     left: 50%;
     width:100%;
-    -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color:white;
     font-family: 'Sofia', cursive;
