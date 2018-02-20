@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Matt and Amy | 11.03.18 &#127881;</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        <link  id="hostStyle" rel="stylesheet" href="css/styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.serialize-object.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-container">
+            <div class="nav-items">
+                <a class='scroll-rsvp' href='#'>RSVP</a>
+                <a class='scroll-venue' href='#'>VENUE</a>
+                <a class='scroll-hotel' href='#'>HOTEL</a>
+                <a class='jams' href='#'>PUMP UP THE JAMS</a>
+            </div>
+        </div>
+        
+        <div class="image-container"></div>
+        <div class="title" >
+                <span onmouseover="slideshow()" onmouseout="stop()">Matt & Amy</span>
+                <span style="font-size: 3.5vw; display: block; letter-spacing: .2em; margin-top: -1vh;">11.03.18</span>
+        </div>
+        
+        <div class="sub-section" id="rsvp">
+            <div class="aligner-top"></div>
+            <div class="form">
+                <form class="form-block" id="rsvp-form">
+                    <div class="copy-block" style="margin-bottom:10px;">
+                        <h1>RSVP</h1>
+                        <p>Please let us know if you can make it!</p>
+                    </div>
+                    <fieldset id="input-field">
+                        <label>Email<span class="asterisk">*</span></label>
+                        <input name="email" title="What's your email address?" type="text" autocomplete="email" required>
+                    </fieldset>
+                    <div class="input-field">
+                        <label>Name<span class="asterisk">*</span></label>
+                        <div class="side-by-side">
+                            <fieldset class="two-column-left">
+                                <input name="first" title="What's your first name?" type="text" autocomplete="given-name" required>
+                                <span class="sub-text">First Name</span>
+                            </fieldset>
+                            <fieldset class="two-column-right">
+                                <input name="last" title="What's your last name?" type="text" autocomplete="family-name" required>
+                                <span class="sub-text">Last Name</span>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <fieldset id="input-field">
+                        <label>Are you attending?<span class="asterisk">*</span></label>
+                        <input name="attending" title="Are you attending?" type="text" required>
+                    </fieldset>
+                    <fieldset id="input-field">
+                        <label>Message</label>
+                        <textarea name="message" rows="4" cols="50"></textarea>
+                    </fieldset>
+                    <div class="form-actions">
+                        <button type="submit" class="btn" id="submit-form" form="rsvp-form">SUBMIT</button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="aligner-bottom"></div>
+        </div>
+        <div class="sub-section" id="venue">
+            <div class="aligner-top"></div>
+            <div class="copy-block">
+                <h1>Venue</h1>
+                <p>Our wedding will be held at the beautiful <a target="_blank" href="http://www.viansa.com/" style="border-bottom: 1px solid black; padding-bottom: 1px; padding-left:0px; padding-right:0px; margin-left: 6px; margin-right: 6px; margin-bottom:-2px;"> Viansa Sonoma</a> on November 3rd, 2018.
+                </p>
+            </div>
+            <div class="aligner-bottom"></div>
+        </div>
+        <div class="sub-section" id="hotel">
+            <div class="aligner-top"></div>
+            <div class="copy-block">
+                <h1>Hotel</h1>
+                <p>We have booked a block of rooms at the <a target="_blank" href="https://www.hotelpetaluma.com/" style="border-bottom: 1px solid #000; padding-bottom: 1px; padding-left:0px; padding-right:0px; margin-left: 6px; margin-right: 6px; margin-bottom:-2px;"> Hotel Petaluma</a> for our guests. Please book with the following URL to be placed in our group.
+                </p>
+            </div>
+            <div class="aligner-bottom"></div>
+        </div>
+    </body>
+    <script src="js/mattamy.js"></script>
+</html>
