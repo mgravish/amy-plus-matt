@@ -68,8 +68,21 @@ $('#submit-form').on('click', function(e) {
 });
 
 $(document).ready(function() { // better to use $(document).ready(function(){
+    var navdown = false;
     $('.mobile-menu').on('click touchstart', function() {
-        $('.nav-container').css({ transform:"translate(-50%,0%);" });
+            if(!navdown){
+            $('.nav-container').animate({
+                top: "+=280"
+            }, 250, function() {
+                // Animation complete.
+                navdown=true;
+            });}
+            else{
+            $('.nav-container').animate({
+                top: "-=280"
+            }, 250, function() {
+                navdown=false;
+            });}
     });
 });
     
