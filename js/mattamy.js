@@ -71,8 +71,7 @@ $(document).ready(function() { // better to use $(document).ready(function(){
     var navdown = false;
     $('.mobile-menu').on('touchend click', function(e) {
             if(e.type == 'touchend'){
-                $(this).off('click');
-                $(this).off('dblClick');
+                //$(this).off('click');
             }
             if(!navdown){
                 navdown=true;
