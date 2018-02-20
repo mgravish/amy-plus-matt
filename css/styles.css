@@ -289,15 +289,15 @@ iframe{
 .mobile-menu{
     display: none;
     position:fixed;
-    right:20px;
-    top:20px;
+    right: 0px;
+    top: 0px;
     z-index:2;
-    padding: 20px;
+    padding: 40px;
 }
 
 .mobile-menu img {
-    width:36px;
-    height:36px;
+    width:46px;
+    height:46px;
 }
 
 @media screen and (max-width: 600px) {
