@@ -291,8 +291,10 @@ iframe{
     position:fixed;
     right: 0px;
     top: 0px;
+    margin: 20px;
+    padding: 20px;
     z-index:2;
-    padding: 40px;
+    
 }
 
 .mobile-menu img {
