@@ -66,4 +66,10 @@ $('#submit-form').on('click', function(e) {
         }    
     });
 });
+
+$(document).ready(function() { // better to use $(document).ready(function(){
+    $('.mobile-menu').on('click touchstart', function() {
+        $('.nav-container').css({ transform:"translate(-50%,0%);" });
+    });
+});
     
