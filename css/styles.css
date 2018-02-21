@@ -397,7 +397,7 @@ iframe{
     HAMBURGER STYLING END
 */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .title img{
         width:95vw;
     }
@@ -470,11 +470,20 @@ iframe{
         flex-direction: column;
     }
     
-    fieldset{
+    fieldset {
         padding-bottom: 0px;
         margin-left:0px;
         margin-right:0px;
+        margin-top:8px;
         width:100%;
+    }
+    
+    .sub-section{
+        min-height:600px;
+    }
+    
+    .side-by-side fieldset{
+        margin-top:0px;
     }
     
     input, textarea{
@@ -483,7 +492,7 @@ iframe{
     }
     
     .form-actions{
-        margin-top:20px;
+        margin-top:10px;
     }
     
     .two-column-right{
