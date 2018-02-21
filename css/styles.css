@@ -450,6 +450,9 @@ iframe{
         border: 0px solid white; 
     }
     
+    .form{
+        width:90%;
+    }
     .form-block {
         width:90%;
         max-width: 600px;
@@ -459,5 +462,26 @@ iframe{
         height:50px;
         border:1px solid black;
         font-size: 24px;
+    }
+    
+    .side-by-side{
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-direction: column; /* Safari 6.1+ */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .two-column-right{
+        float:left;
+        width:100%;
+    }
+    .two-column-left{
+        width:100%;
+    }
+    .input-field {
+        padding-bottom: 0px;
+        margin-top:20px;
+        margin-bottom:20px;
     }
 }
