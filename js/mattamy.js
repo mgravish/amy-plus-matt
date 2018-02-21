@@ -66,7 +66,11 @@ $('#submit-form').on('click', function(e) {
         }    
     });
 });
+
+
+
 var navdown = false;
+
 $(document).ready(function() { // better to use $(document).ready(function(){
     
     var handled = false;
@@ -87,8 +91,9 @@ $(document).ready(function() { // better to use $(document).ready(function(){
         }
 });});
 function handleIt() { 
-        
+        $('#menu-toggle').toggleClass('open');
         if(!navdown){
+            $('.nav-container').css('visibility', 'visible');
             navdown=true;
             $('.nav-container').animate({
                 top: "+=280"
@@ -97,11 +102,12 @@ function handleIt() {
 
         });}
         else{
+            
             navdown=false;
             $('.nav-container').animate({
             top: "-=280"
         }, 250, function() {
-
+                $('.nav-container').css('visibility', 'hidden');
         });}
 }
     
