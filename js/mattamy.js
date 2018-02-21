@@ -69,25 +69,38 @@ $('#submit-form').on('click', function(e) {
 
 $(document).ready(function() { // better to use $(document).ready(function(){
     var navdown = false;
+    var handled = false;
     $('.mobile-menu').on('touchend click', function(e) {
-            if(e.type == 'touchend'){
-                $(this).off('click');
-            }
-            if(!navdown){
-                navdown=true;
+        //
+        e.stopImmediatePropagation();
+
+        if(e.type == "touchend") {
+            handled = true;
+            handleIt();
+        }
+        else if(e.type == "click" && !handled) {
+            handleIt();
+        }
+        else {
+            handled = false;
+        }
+});});
+function handleIt() { 
+        //
+        if(!navdown){
+            navdown=true;
             $('.nav-container').animate({
                 top: "+=280"
             }, 250, function() {
-                // Animation complete.
-                
-            });}
-            else{
-                navdown=false;
+            // Animation complete.
+
+        });}
+        else{
+            navdown=false;
             $('.nav-container').animate({
-                top: "-=280"
-            }, 250, function() {
-                
-            });}
-    });
-});
+            top: "-=280"
+        }, 250, function() {
+
+        });}
+}
     
