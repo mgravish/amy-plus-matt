@@ -66,12 +66,12 @@ $('#submit-form').on('click', function(e) {
         }    
     });
 });
-
+var navdown = false;
 $(document).ready(function() { // better to use $(document).ready(function(){
-    var navdown = false;
+    
     var handled = false;
     $('.mobile-menu').on('touchend click', function(e) {
-        //
+        
         e.stopImmediatePropagation();
 
         if(e.type == "touchend") {
@@ -79,6 +79,7 @@ $(document).ready(function() { // better to use $(document).ready(function(){
             handleIt();
         }
         else if(e.type == "click" && !handled) {
+            console.log("clicked");
             handleIt();
         }
         else {
@@ -86,7 +87,7 @@ $(document).ready(function() { // better to use $(document).ready(function(){
         }
 });});
 function handleIt() { 
-        //
+        
         if(!navdown){
             navdown=true;
             $('.nav-container').animate({
