@@ -83,8 +83,6 @@ a {
     color:gray;
 }
 
-
-
 .rsvp-header{
     position: relative;
 }
@@ -408,13 +406,13 @@ iframe{
         font-size: 15vw;
     }
     
-    .sub-head{
-        font-size:20px;
-        widows: 3;
+    .sub-head {
+        font-size:16px;
+        line-height: 16px;
     }
     
     h1{
-        font-size: 80px;
+        font-size: 70px;
     }
     
     .nav-container {
@@ -450,18 +448,18 @@ iframe{
         border: 0px solid white; 
     }
     
-    .form{
-        width:90%;
-    }
     .form-block {
-        width:90%;
-        max-width: 600px;
+        width:80%;
+    }
+    
+    label{ 
+        font-size: 12px;
     }
     
     .form-block input, textarea {
-        height:50px;
+        height:30px;
         border:1px solid black;
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .side-by-side{
@@ -470,6 +468,22 @@ iframe{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+    }
+    
+    fieldset{
+        padding-bottom: 0px;
+        margin-left:0px;
+        margin-right:0px;
+        width:100%;
+    }
+    
+    input, textarea{
+        width:100%;
+        padding-left:0px;
+    }
+    
+    .form-actions{
+        margin-top:20px;
     }
     
     .two-column-right{
@@ -481,7 +495,7 @@ iframe{
     }
     .input-field {
         padding-bottom: 0px;
-        margin-top:20px;
-        margin-bottom:20px;
+        margin-top:10px;
+        margin-bottom:10px;
     }
 }
