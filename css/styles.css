@@ -9,7 +9,7 @@ body {
     border: 50px solid white; 
     width:100%;
     height:100%;
-    opacity: 0.3;
+    opacity: 0.375;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,9 +35,16 @@ body {
     -webkit-box-pack: center;
     justify-content: center;
     position: relative;
+    letter-spacing: .3em;
+    visibility: visible;
+    font-size: 12px;
     top:50%;
     -webkit-transform: translate(0%,-50%);
     transform: translate(0%,-50%);
+}
+
+.nav-items a{
+    color:gray;
 }
 
 a {
@@ -265,10 +272,15 @@ iframe{
 
 .title-block {
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
-    font-family: 'Meddon', cursive;
-    font-size: 5vw;
+    font-family: 'Kristi', cursive;
+    font-size: 160px;
+    line-height: 100px;
+    /* Matt & Amy: */
+    color: #FFF9F1;
+    text-shadow: 0 0 100px #C0BEBB;
     -webkit-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
@@ -277,11 +289,12 @@ iframe{
 }
 
 .date {
-    color:#fff0e5;
-    font-size: 7vw;
-    letter-spacing: .2em;
+    color: white;
+    font-size: 24px;
+    letter-spacing: .75em;
     text-align: center;
-    font-family: 'Kristi', cursive;
+    font-family: Montserrat;
+    text-shadow: 0 0 100px #A09F9D;
 }
 .title img{
     width:65vw;
@@ -309,7 +322,7 @@ iframe{
 
 .mobile-menu span {
   display: block;
-  background: #F4D2BA;
+  background: antiquewhite;
   border-radius: 2px;
 }
 
@@ -397,13 +410,21 @@ iframe{
     HAMBURGER STYLING END
 */
 
+
+/*
+    MEDIA STYLING BEGIN
+*/
 @media screen and (max-width: 750px) {
     .title img{
         width:95vw;
     }
     
-    .date{
-        font-size: 15vw;
+    .date {
+        font-size: 26px;
+    }
+    
+    .title {
+        font-size: 140px;
     }
     
     .sub-head {

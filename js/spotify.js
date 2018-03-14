@@ -1,20 +1,8 @@
-
-$( document ).ready(function() {
-    $.ajax({
-        url: 'https://accounts.spotify.com/api/token',
-        headers: {
-            'Access-Control-Allow-Origin':'*',
-            'Authorization':'Basic ' + 'YzAxZmFkMzdhYWZlNGY3NjhiMmU5OGQ3NDY3YzRjODU6Yjc4ZjFkNTVmZjk2NGM4OGIxNzZkMDJkYWU2NDgxZGY="'
-        },
-        method: 'POST',
-        dataType: 'json',
-        data: {
-            grant_type:'client_credentials'
-        }
-    });
-});
-
+var Spotify = require('spotify-web-api-js');
 var spotifyApi = new SpotifyWebApi();
+var s = new Spotify();
+
+spotifyApi.setAccessToken('BQBXS5G2oxNARykcBUNqcHTFKIvyFCIPjbqK5t9bPRrNyPAy2S5jbEui35ATFiB-vgWlg1ggjEW0szmzHRzu7AxF_2Y_GqZPng9s0Rwb4rY7sCpxVNrxcStjEvk6vo-AYCGBMyWq_xorGL0gBpGNL_8dYTa5kKY&refresh_token=AQAyJtIcW7ePj8yBgVMeWl6OAgtQNI4FBNhL_LYqUsxAjvxw9oRZPbJ8NVa1PZhIHGUM4W5mNSfj81RNmX0MconhUtPiolYYpb9z4GMMdWcLnkSwjc5RLd-_m3XLxwHcO3Q');
 
 function keyHandler(e) { 
     var keycode = e.charCode || e.keyCode;
@@ -22,6 +10,8 @@ function keyHandler(e) {
         searchSong($('input').val());
     }
 }
+
+window.keyHandler = keyHandler;
 
 function getTopTracks(access_token) {
   $.ajax({
@@ -36,7 +26,6 @@ function getTopTracks(access_token) {
   });
 }
 
-
 function searchSong(searchstring){
     spotifyApi.search(searchstring,["track"])
       .then(function(data) {
@@ -50,6 +39,14 @@ function searchSong(searchstring){
 
 function parseResults(data)
 {
+     var resultDiv = `
+    <div class="results">
+        <img/>
+        <p id="band-name">
+        <p id="track-name">
+    </div>
+    `;
+    
     $('#search-results').empty();
     var trackObj = data.tracks.items[0];
     var bandName = trackObj.artists[0].name;

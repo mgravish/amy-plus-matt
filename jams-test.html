@@ -1,8 +1,10 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="/Users/matthewgravish/node_modules/spotify-web-api-js/src/spotify-web-api.js"></script>
-        <script src="./js/spotify.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="js/jquery.serialize-object.min.js"></script>
+        <script src="js/spotify-web-api.js"></script>
+        <script src="js/bundle.js"></script>
+        
         <link  id="hostStyle" rel="stylesheet" href="css/spotstyle.css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
     </head>
@@ -14,7 +16,7 @@
             <iframe src="https://open.spotify.com/embed?uri=spotify:user:mgravish:playlist:6fR3uAt3ValTuFRN95cRbT&theme=white" width="800" height="380" frameborder="0" allowtransparency="true"></iframe>
             <br>
             <div class="search-label">Search</div>
-            <input type="text" onkeydown="keyHandler(event)">
+            <input type="text" onkeydown="window.keyHandler(event)">
             <div id="search-results"></div>
         </div>
     </body>    
