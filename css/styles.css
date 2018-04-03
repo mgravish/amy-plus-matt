@@ -1,14 +1,119 @@
+/*  Text Styles */
+
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
+    background-color: white;
 }
 
-.image-container{
-    box-sizing: border-box;
-    border: 50px solid white; 
+h1{
+    font-family: Montserrat;
+    font-weight: 600;
+    border-bottom: 5px solid #F4D2BA;
+    display: inline-block;
+    line-height: 48px;
+    font-size: 24px;
+    color: #1E1E1E;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h2{
+    /* Hotel Petaluma: */
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    color: #1E1E1E;
+    letter-spacing: 0.86px;
+}
+
+h3{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    color: #7E7E7E;
+    letter-spacing: 1.75px;
+}
+
+h4{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    letter-spacing: .5px;
+    margin-top:40px;
+}
+
+.party-detail-name {
+    font-family: Sacramento;
+    font-size: 36px;
+    margin-top:60px;
+    color: #191919;
+    letter-spacing: 0;
+    font-weight:100;
+}
+
+.party-detail-title {
+    font-family: Montserrat;
+    font-weight:600;
+    font-size: 14px;
+    color: #F4D2BA;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-top:10px;
+    margin-bottom: 40px;
+}
+
+p{
+    /* No, but really. Matt: */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight:400;
+    color: #1F1F1F;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-top:20px;
+}
+
+p a{
+    color: #D9AD8E;
+}
+
+strong{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight:600;
+    letter-spacing: 0.25px;
+    line-height: 20px;
+    color: #1F1F1F;
+}
+
+/*  IDs   */
+
+#side-home {
+    height:100vh;
+    align-content: center;
+}
+
+#footer {
+    height:60px;
+    border-top: 2px solid #F6E4D8;
+    width:50%;
+    transform:translateX(50%);
+}
+
+iframe{
+    margin-top:60px;
+    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
+}
+
+/*  Classes   */
+.image-container {
     width:100%;
     height:100%;
+    top:0;
+    position: absolute;
     opacity: 0.375;
     background-size:cover;
     background-position: center;
@@ -16,516 +121,314 @@ body {
     background-image: url("../slideshow-small/1.jpg");
 }
 
-.nav-container {
-    position:fixed;
-    height:60px;
-    width:100%;
+.left-box{
     background-color: white;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-50%);
+    float:left;
+    width:60%;
+    height:100%;
+    position:fixed;
+    top:0;
+    overflow: hidden;
+}
+
+.right-box{
+    height:100%;
+    background: white;
+    float:right;
+    width:40%;
+}
+
+.left-box img{
+    opacity: .5;
+    top:0;
+    height:100%;
+    position: absolute;
+}
+
+.left-box-title-text{
+    /* Matt & Amy: */
+    font-family: Sacramento-Regular;
+    font-size: 72px;
+    color: white;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.left-box-title-subtext{
+    /* 11.03.18: */
+    font-family: Montserrat-SemiBold;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.title-block{
+    text-shadow: 0 0 30px rgba(128,128,128, 0.5);
+}
+
+.vertical-center{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.spacer{
+    height:20px;
+}
+
+.title-text{
+    /* Viansa Winery: */
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1E1E1E;
+    letter-spacing: 3.75px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-location{
+    /* Sonoma, California: */
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #7E7E7E;
+    letter-spacing: 1.75px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.title-date{
+    /* November 3rd, 2018: */
+    font-family: Montserrat;
+    font-size: 12px;
+    color: #ADADAD;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin-top: 26px;
+    text-transform: uppercase;
+}
+
+.button{
+    /* RSVP: */
+    width:128px;
+    height:42px;
+    font-family: Montserrat-SemiBold;
+    font-size: 12px;
+    color: #504747;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #F4D2BA;
+    border-radius: 4px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top:20px;
+    cursor: pointer;
+}
+
+.side-block {
+    display: inline-block;
+    width:100%;
+    align-content: center;
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 1px solid #F6E4D8;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 60px;
+}
+
+/*  Takeovers  */
+.left-side-takeover-container {
+    visibility: hidden;
+    float:left;
+    width:60%;
+    height:100%;
+    position:fixed;
+    top:0;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: rgba(244,210,186, 0);
+    transition: .5s background visibility;
+    transition-delay: .15s;
+    transition-timing-function: ease-in-out;
+}
+
+.right-side-takeover-container {
+    visibility: hidden;
+    float:right;
+    width:40%;
+    height:100%;
+    position:fixed;
+    top:0;
+    opacity: 0.0;
+    box-sizing: border-box;
+    padding: 0px;
+    transition: .25s all;
+    transition-delay: .15s;
+    transition-timing-function: ease-in-out;
     z-index: 1;
 }
 
-.nav-items {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
+.left-side-takeover-content {
     align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
+    box-sizing: border-box;
+    background-color:white;
+    box-shadow: 0 0 40px rgba(128,128,128, 0.5);
+    opacity: 0;
+    top:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    padding:40px;
+    transform: translateY(-100vh);
+    transition: .5s all;
+    transition-timing-function: ease-in-out;
+    overflow: scroll;
+}
+
+.right-side-takeover-content {
+    align-items: center;
+    box-sizing: border-box;
+    background-color:white;
+    top:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    transition: .5s all;
+    transition-timing-function: ease-in-out;
+    overflow: scroll;
+    z-index:1;
+}
+
+#input-field{
+    margin-top:20px;
+}
+
+.spotlight-image {
+    box-sizing: border-box;
     position: relative;
-    letter-spacing: .3em;
-    visibility: visible;
-    font-size: 12px;
-    top:50%;
-    -webkit-transform: translate(0%,-50%);
-    transform: translate(0%,-50%);
+    width:100%;
+    height:240px;
+    overflow: hidden;
 }
 
-.nav-items a{
-    color:gray;
+.spotlight-image img{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-a {
-    color:black;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:400;
-    padding-left:30px;
-    padding-right:30px;
-    text-decoration: none;
-}
-
-.two-column-left{
-    float:left;
-    width:48%;
+fieldset{
+    padding:0;
+    border:none;
 }
 
 .asterisk{
     padding-left:5px;
-    color:gray;
+    color: #ADADAD;
+}
+
+label{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight:500;
+    color: #1F1F1F;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin-top:20px;
+}
+
+input, textarea{
+    border: 2px solid #E9E9E9;
+    height:40px;
+    box-sizing: border-box;
+    width:100%;
+    resize: none;
+    font-family: Montserrat;
+    padding-left:6px;
+    font-size: 12px;
+}
+
+.close-btn {
+    display:block;
+    position: relative;
+    top: 0px;
+    float:right;
+    width:16px;
+    height:16px;
+    background-color:white;
+    cursor: pointer;
+}
+
+textarea{
+    height:60px;
+}
+
+.two-column-left{
+    float:left;
+    width:50%;
 }
 
 .two-column-right{
     float:right;
-    width:48%;
+    width:50%;
 }
 
-.sub-section{
-    position:relative;
-    height:100%;
-    width:100%;
-    display: -webkit-box;
+.side-by-side{
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
 }
 
-.sub-text{
-    text-transform: uppercase;
+.copy-block {
+    text-align: center;
+}
+
+.sub-text {
+    font-family: Montserrat;
+    font-weight: 500;
     font-size: 10px;
-    font-family: 'Montserrat', sans-serif;
-    color:gray;
-}
-
-.rsvp-header{
-    position: relative;
+    color: #ADADAD;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 26px;
+    text-transform: uppercase;
 }
 
 .form-actions {
-    margin: 0;
-    background-color: transparent;
-    text-align: center;
+    margin-top:20px;
+    align-content: center;
 }
 
-button{
-    height:38px;
-    width:120px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color:black;
-    background:none;
-    border: 1px solid black;
-    border-radius: 2px;
-    letter-spacing: .07em;
-    cursor: pointer; /* Safari */
-    transition: border, color .2s;
-}
-
-button:hover {
-    border: 1px solid gray;
-    color:gray;
-}
-
-h1 {
-    font-size: 72px;
-    font-family: 'Kristi', cursive;
-    font-weight: 200;
-    color:#F4D2BA;
-    padding-bottom: 4px;
-    margin-top:0px;
-    margin-bottom: 10px;
-    display: -webkit-box;
+.form-actions button{
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
-}
-
-p {
-    display: block;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    padding-left: 40px;
-    padding-right:40px;
-    line-height: 28px;
-}
-
-fieldset {
-    padding: inherit;
-    padding-bottom: 15px;
-    border:none;
-}
-
-label {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color:black;
-}
-
-input, textarea {
-    margin-top:5px;
-    font-family: 'Montserrat', sans-serif;
-    padding-left:6px;
-}
-
-#rsvp{
+    line-height: 0px;
     background-color: white;
-    color:black;
+}
+
+.image-grid {
     width:100%;
-}
-
-#venue::after {
-    content: "";
-    background-image: url("http://www.viansa.com/static/images/2016/the-estate/vs-the-estate-view.jpg");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-#hotel::after {
-    content: "";
-    background-image: url("https://www.hotelpetaluma.com/gallery-images/properties/1/1/3/IMG_0731blended.jpg");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-.txt{
-    /*color:white;*/
-}
-
-.form{
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-grid img{
+    margin-right:2px;
+    margin-top: 2px;
+    width:120px;
+    height:120px;
     position: relative;
-    width:100%;
+    background-color:red;
+    cursor: pointer;
+    transition: .5s opacity;
 }
 
-.form-block {
-    width:50%;
-    max-width: 600px;
-}
-
-.input-field {
-    padding-bottom: 20px;
-}
-
-.form-block input, textarea{
-    width:100%;
-    height:25px;
-    border: 2px solid #efefef;
-}
-
-textarea{
-    width:100%;
-    resize:none;
-    border-color: #efefef;
-    height:60px;
-}
-
-.jams-block{
-    width:698px;
-    height:388px;
-    margin-top:50px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-50%);
-}
-
-.sub-head{
-    text-align: center;
-    margin-top:0px;
-}
-
-iframe{
-    width:700px;
-    height:390px;
-    left:-1px;
-    bottom:-1px;
-    position: relative;
-    transition: translate(10%);
-}
-
-.aligner-top{align-self: flex-start;}
-.aligner-bottom{align-self: flex-end;}
-
-.title-block {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    font-family: 'Kristi', cursive;
-    font-size: 160px;
-    line-height: 100px;
-    /* Matt & Amy: */
-    color: #FFF9F1;
-    text-shadow: 0 0 100px #C0BEBB;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%); 
-}
-
-.date {
-    color: white;
-    font-size: 24px;
-    letter-spacing: .75em;
-    text-align: center;
-    font-family: Montserrat;
-    text-shadow: 0 0 100px #A09F9D;
-}
-.title img{
-    width:65vw;
-    max-width:750px;
-    margin-bottom: -40px;
-}
-
-.mobile-menu{
-    display: none;
-    position:fixed;
-    right: 10px;
-    top: 0px;
-    z-index:2;
-    /*background-color: aliceblue;*/
-}
-
-/*
-    HAMBURGER STYLING BEGIN 
-*/
-    
-.mobile-menu * {
-  transition: .25s ease-in-out;
-  box-sizing: border-box;
-}
-
-.mobile-menu span {
-  display: block;
-  background: antiquewhite;
-  border-radius: 2px;
-}
-
-#menu-toggle {
-  width: 80px;
-  height: 80px;
-  margin: 10px auto;
-  position: relative;
-  position: relative;
-  cursor: pointer;
-
-  border-radius: 5px;
-}
-
-#menu-toggle #hamburger {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#menu-toggle #hamburger span {
-  width: 60%;
-  height: 4px;
-  position: relative;
-  top: 14px;
-  left: 16px;
-  margin: 10px 0;
-}
-
-#menu-toggle #hamburger span:nth-child(1) {
-  transition-delay: .5s;
-}
-#menu-toggle #hamburger span:nth-child(2) {
-  transition-delay: .625s;
-}
-#menu-toggle #hamburger span:nth-child(3) {
-  transition-delay: .75s;
-}
-#menu-toggle #cross {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transform: rotate(45deg);
-}
-#menu-toggle #cross span:nth-child(1) {
-  height: 0%;
-  width: 4px;
-  position: absolute;
-  top: 16%;
-  left:38px;
-  transition-delay: 0s;
-}
-
-#menu-toggle #cross span:nth-child(2) {
-  width: 0%;
-  height: 4px;
-  position: absolute;
-  left: 16%;
-  top: 38px;
-  transition-delay: .25s;
-}
-
-#menu-toggle.open #hamburger span {
-  width: 0%;
-}
-#menu-toggle.open #hamburger span:nth-child(1) {
-  transition-delay: 0s;
-}
-#menu-toggle.open #hamburger span:nth-child(2) {
-  transition-delay: .125s;
-}
-#menu-toggle.open #hamburger span:nth-child(3) {
-  transition-delay: .25s;
-}
-#menu-toggle.open #cross span:nth-child(1) {
-  height: 70%;
-  transition-delay: .625s;
-}
-#menu-toggle.open #cross span:nth-child(2) {
-  width: 70%;
-  transition-delay: .375s;
-}
-
-/*
-    HAMBURGER STYLING END
-*/
-
-
-/*
-    MEDIA STYLING BEGIN
-*/
-@media screen and (max-width: 750px) {
-    .title img{
-        width:95vw;
-    }
-    
-    .date {
-        font-size: 26px;
-    }
-    
-    .title {
-        font-size: 140px;
-    }
-    
-    .sub-head {
-        font-size:16px;
-        line-height: 16px;
-    }
-    
-    h1{
-        font-size: 70px;
-    }
-    
-    .nav-container {
-        visibility: hidden;
-        height:280px;
-        -webkit-transform: translate(-50%,-100%);
-        transform: translate(-50%,-100%);
-        -webkit-box-shadow: 0px 15px 60px 2px rgba(143,143,143,0.25);
-        -moz-box-shadow: 0px 15px 60px 2px rgba(143,143,143,0.25);
-        box-shadow: 0px 15px 60px 2px rgba(143,143,143,0.25);
-        z-index:1;
-    }
-    
-    .mobile-menu {
-        display:block !important;
-    }
-    
-    .nav-items {
-        display: -webkit-flex; /* Safari */
-        -webkit-flex-direction: column; /* Safari 6.1+ */
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }   
-    
-    .nav-items a {
-        margin-top:15px;
-        margin-bottom:15px;
-        font-size: 20px;
-    }
-    
-    .image-container {
-        border: 0px solid white; 
-    }
-    
-    .form-block {
-        width:80%;
-    }
-    
-    label{ 
-        font-size: 12px;
-    }
-    
-    .form-block input, textarea {
-        height:30px;
-        border:1px solid black;
-        font-size: 20px;
-    }
-    
-    .side-by-side{
-        display: -webkit-flex; /* Safari */
-        -webkit-flex-direction: column; /* Safari 6.1+ */
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-    
-    fieldset {
-        padding-bottom: 0px;
-        margin-left:0px;
-        margin-right:0px;
-        margin-top:8px;
-        width:100%;
-    }
-    
-    .sub-section{
-        min-height:600px;
-    }
-    
-    .side-by-side fieldset{
-        margin-top:0px;
-    }
-    
-    input, textarea{
-        width:100%;
-        padding-left:0px;
-    }
-    
-    .form-actions{
-        margin-top:10px;
-    }
-    
-    .two-column-right{
-        float:left;
-        width:100%;
-    }
-    .two-column-left{
-        width:100%;
-    }
-    .input-field {
-        padding-bottom: 0px;
-        margin-top:10px;
-        margin-bottom:10px;
-    }
+.image-grid img:hover{
+    opacity:1;
 }

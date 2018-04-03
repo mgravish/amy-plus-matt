@@ -107,9 +107,7 @@ function handleIt() {
         else{
             
             navdown=false;
-            $('.nav-container').animate({
-            top: "-=280"
-        }, 250, function() {
+            $('.nav-container').animate({top: "-=280"}, 250, function() {
                 $('.nav-container').css('visibility', 'hidden');
         });}
 }

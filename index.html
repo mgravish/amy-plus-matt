@@ -11,105 +11,191 @@
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link  id="hostStyle" rel="stylesheet" href="css/styles.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Kristi" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/jquery.serialize-object.min.js"></script>
-        <script src="js/spotify-web-api.js"></script>
-        <script src="js/bundle.js"></script>
     </head>
     <body>
-        <div class="mobile-menu">
-            <div class="aligner-top"></div>
-                <div id="menu-toggle">
-                  <div id="hamburger">
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                  </div>
-                  <div id="cross">
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                  </div>
+        <div class="left-box">
+            <div class="image-container"></div>
+            <div class="vertical-center">
+                <div class="title-block">
+                    <span class="left-box-title-text">Matt and Amy</span>
+                    <br>
+                    <span class="left-box-title-subtext">11.03.18</span>
                 </div>
-            <div class="aligner-bottom"></div>
-        </div>
-        <div class="nav-container">
-            <div class="nav-items">
-                <a class='scroll-rsvp' href='#'>RSVP</a>
-                <a class='scroll-venue' href='#'>VENUE</a>
-                <a class='scroll-hotel' href='#'>HOTEL</a>
-                <a class='jams' href='#'>JAMS</a>
             </div>
-        </div>
-        
-        <div class="image-container"></div>
-        <div class="title-block">
-                <div class="title" onmouseover="slideshow()" onmouseout="stop()">Matt & Amy</div>
-                <div class="date">11.03.18</div>
-        </div>
-        
-        <div class="sub-section" id="rsvp">
-            <div class="aligner-top"></div>
-            <div class="form">
-                <form class="form-block" id="rsvp-form">
-                    <div class="copy-block" style="margin-bottom:10px;">
-                        <h1>RSVP</h1>
-                        <p class="sub-head">Please let us know if you can make it!</p>
-                    </div>
-                    <fieldset id="input-field">
-                        <label>Email<span class="asterisk">*</span></label>
-                        <input name="email" title="What's your email address?" type="text" autocomplete="email" required>
-                    </fieldset>
-                    <div class="input-field">
-                        <label>Name<span class="asterisk">*</span></label>
-                        <div class="side-by-side">
-                            <fieldset class="two-column-left">
-                                <input name="first" title="What's your first name?" type="text" autocomplete="given-name" required>
-                                <span class="sub-text">First Name</span>
-                            </fieldset>
-                            <fieldset class="two-column-right">
-                                <input name="last" title="What's your last name?" type="text" autocomplete="family-name" required>
-                                <span class="sub-text">Last Name</span>
-                            </fieldset>
+<!--  BEGIN RSVP FORM  -->
+            <div class="left-side-takeover-container" id="rsvp-form-container">
+                <form class="left-side-takeover-content" id="rsvp-form">
+                        <div class="close-btn" id="close-rsvp">
+                            <img src="x.svg">
                         </div>
-                    </div>
-                    <fieldset id="input-field">
-                        <label>Are you attending?<span class="asterisk">*</span></label>
-                        <input name="attending" title="Are you attending?" type="text" required>
-                    </fieldset>
-                    <fieldset id="input-field">
-                        <label>Message</label>
-                        <textarea name="message" rows="4" cols="50"></textarea>
-                    </fieldset>
-                    <div class="form-actions">
-                        <button type="submit" class="btn" id="submit-form" form="rsvp-form">SUBMIT</button>
-                    </div>
+                    <br>
+                        <div class="copy-block">
+                            <h1>RSVP</h1>
+                            <p style="font-size:14px;" class="sub-head">Please let us know if you can make it!</p>
+                        </div>
+                        <fieldset id="input-field">
+                            <label>Email<span class="asterisk">*</span></label>
+                            <br>
+                            <input name="email" title="What's your email address?" type="text" autocomplete="email" required="required">
+                        </fieldset>
+                        <div id="input-field">
+                            <label>Name<span class="asterisk">*</span></label>
+                            <div class="side-by-side">
+                                <fieldset class="two-column-left">
+                                    <input name="first" title="What's your first name?" type="text" autocomplete="given-name" required="required">
+                                    <span class="sub-text">First Name</span>
+                                </fieldset>
+                                <fieldset class="two-column-right">
+                                    <input name="last" title="What's your last name?" type="text" autocomplete="family-name" required="required">
+                                    <span class="sub-text">Last Name</span>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <fieldset id="input-field">
+                            <label>Are you attending?<span class="asterisk">*</span></label>
+                            <input name="attending" title="Are you attending?" type="text" required="required">
+                        </fieldset>
+                        <fieldset id="input-field">
+                            <label>Address (for sending invites)</label>
+                            <br>
+                            <textarea name="message" rows="4" cols="50" autocomplete='street-address'></textarea>
+                        </fieldset>
+                        <div class="form-actions">
+                            <button type="submit" class="button" id="submit-form" form="rsvp-form">SUBMIT</button>
+                        </div>
                 </form>
+            </div>
+<!--  END FORM -->
+<!--  BEGIN PARTY -->
+            <div class="left-side-takeover-container" id="wedding-party-container">
+                <div class="left-side-takeover-content" id="wedding-party-content">
+                        <div class="close-btn" id="close-party">
+                            <img src="x.svg">
+                        </div>
+                    <br>
+                        <div class="copy-block">
+                            <h1>WEDDING PARTY</h1>
+                        </div>
+                        <span class="party-detail-name">Bridesmaids</span>
+                        <div class="image-grid">
+                            <img id="kelly" src="imgs/small/kelly.jpg">
+                            <img id="isabel" src="imgs/small/isabel.jpg">
+                            <img id="andi">
+                            <img id="leah">
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                        </div>
+                    <br>
+                        <span class="party-detail-name">Groomsmen</span>
+                        <div class="image-grid">
+                            <img id="nick" src= imgs/small/nick.jpg>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                            <img>
+                        </div>
+                </div>
+            </div>
+<!--  END PARTY -->
+        </div>
+
+        
+        
+<!--  RIGHT SIDE  -->
+        <div class="right-box">
+            <div class="right-side-takeover-container" id="wedding-party-detail-container">
+                <div class="spotlight-image"> 
+                    <img id="cover-image" src="slideshow-small/5.jpg"> 
+                </div>
+                <div class="right-side-takeover-content" id="wedding-party-detail-content"></div>
                 
             </div>
-            <div class="aligner-bottom"></div>
-        </div>
-        <div class="sub-section" id="venue">
-            <div class="aligner-top"></div>
-            <div class="copy-block">
-                <h1>Venue</h1>
-                <p>Our wedding will be held at the beautiful <a target="_blank" href="http://www.viansa.com/" style="border-bottom: 1px solid black; padding-bottom: 1px; padding-left:0px; padding-right:0px; margin-left: 6px; margin-right: 6px; margin-bottom:-2px;"> Viansa Sonoma</a> on November 3rd, 2018.
-                </p>
+            <div id="side-home">
+                <div class="vertical-center">
+                    <div class="title-text">Viansa Winery</div>
+                    <div class="title-location">Sonoma, California</div>
+                    <div class="title-date">November 3rd, 2018</div>
+                    <div class="spacer"></div>
+<!-- RSVP/Party Buttons
+                    <div class="button" id="rsvp-btn">RSVP</div>
+                    <div class="button" id="party-btn">PARTY</div>
+-->
+                </div>
             </div>
-            <div class="aligner-bottom"></div>
-        </div>
-        <div class="sub-section" id="hotel">
-            <div class="aligner-top"></div>
-            <div class="copy-block">
-                <h1>Hotel</h1>
-                <p>We have booked a block of rooms at the <a target="_blank" href="https://www.hotelpetaluma.com/" style="border-bottom: 1px solid #000; padding-bottom: 1px; padding-left:0px; padding-right:0px; margin-left: 6px; margin-right: 6px; margin-bottom:-2px;"> Hotel Petaluma</a> for our guests. Please book with the following URL to be placed in our group.
-                </p>
+            <div class="side-block" id="story">
+                    <h1>Our Story</h1>
+                    <br>
+                    <h3>We met in a bar.</h3>
+                    <p>
+                        No, but really. Matt and Amy met one fateful night at a hip new bar in downtown San Francisco. Matt was there celebrating a friend’s birthday, and Amy was stopping in for a drink with her sister and sister’s boyfriend.
+                    </p>
+                    <p>
+                        Growing tired of her company, Amy turned her attention to the loud boys at the next table. Amy approached Matt and the two quickly bonded over a mutual love of burritos, bloody marys, and San Francisco’s Mission district.
+                    </p>
+                    <p>
+                        Before they knew it, the had chatted the night away and their friends were gone. Five years and two coasts later, the pair is tying the knot and starting the next phase of their lives together.
+                    </p>
             </div>
-            <div class="aligner-bottom"></div>
+            <div class="side-block" id="hotel">
+                    <h1>Hotel</h1>
+                    <br>
+                    <h2>Hotel Petaluma</h2>
+                    <p>
+                        Located in downtown Petaluma, the Hotel Petaluma is a short walk from cute shops, cozy restaurants, and some great breweries and bars.
+                    </p>
+                    <p>
+                        We’ve secured a block of rooms, so please use the link below to book your room.
+                    </p>
+                    <p> <strong>
+                        Book your room:
+                        </strong>
+                        <br>
+                        <a href="https://www.google.com" target="_blank">link.hotelpetaluma.com</a>
+                    </p>
+                    <iframe width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ1DLmx20hYAROc8rnF5dbic&key=AIzaSyBr7LObZ2tuYhSUjdgI32EDHWlImflyOH0" allowfullscreen></iframe>
+            </div>
+            <div class="side-block" id="faq">
+                    <h1>FAQ</h1>
+                    <br>
+                    <h3>You have questions. We have answers.</h3>
+                    <h4>Q: What is the attire?</h4>
+                    <p>
+                        Whatever makes you feel fancy! Nothing super strict, but please leave the sandals and Hawaiian shirts at home.
+                    </p>
+                    <h4>Q: When is the RSVP deadline?</h4>
+                    <p>
+                        Please let us know if you can make it September 1st so we can plan accordingly.
+                    </p>
+                    <h4>Q: Can I bring a date?</h4>
+                    <p>
+                        Check your invite for your +1!
+                    </p>
+                    <h4>Q: What if my date is a cat?</h4>
+                    <p>
+                        We love furry friends, but cats are not allowed at the venue!
+                    </p>
+                    <h4>Q: Are kids welcome?</h4>
+                    <p>
+                        We love kids, but unless they were included on your invite, we may be unable to accommodate them.
+                    </p>
+                    <h4>Q: Whom should I call with questions?</h4>
+                    <p>
+                        If you have any further questions, please email Matt and Amy at hi@amyplusmatt.com
+                    </p>
+            </div>
+            <div id="footer"></div>
         </div>
     </body>
-    <script src="js/mattamy.js"></script>
+    <script src="js/mattamy-v2.js"></script>
 </html>
