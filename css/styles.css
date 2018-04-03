@@ -7,28 +7,28 @@ body {
     background-color: white;
 }
 
-h1{
+h1 {
     font-family: Montserrat;
     font-weight: 600;
     border-bottom: 5px solid #F4D2BA;
     display: inline-block;
     line-height: 48px;
     font-size: 24px;
-    color: #1E1E1E;
-    letter-spacing: 5px;
+    color: #2C344C;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     /* Hotel Petaluma: */
     font-family: Montserrat;
     font-weight: 700;
     font-size: 12px;
-    color: #1E1E1E;
+    color: #2C344C;
     letter-spacing: 0.86px;
 }
 
-h3{
+h3 {
     font-family: Montserrat;
     font-weight: 400;
     font-size: 14px;
@@ -36,7 +36,7 @@ h3{
     letter-spacing: 1.75px;
 }
 
-h4{
+h4 {
     font-family: Montserrat;
     font-weight: 500;
     font-size: 14px;
@@ -44,6 +44,55 @@ h4{
     letter-spacing: .5px;
     margin-top:40px;
 }
+
+p {
+    /* No, but really. Matt: */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight:400;
+    color: #1F1F1F;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-top:20px;
+}
+
+p a {
+    color: #D9AD8E;
+}
+
+strong {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight:600;
+    letter-spacing: 0.25px;
+    line-height: 20px;
+    color: #2C344C;
+}
+
+
+/*  IDs   */
+
+#side-home {
+    height:100vh;
+    align-content: center;
+    background-image: url("../slideshow-small/paper-texture-light.png");
+    background-size: cover;
+}
+
+#footer {
+    height:60px;
+    border-top: 2px solid #F6E4D8;
+    width:50%;
+    transform:translateX(50%);
+}
+
+iframe {
+    margin-top:60px;
+    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
+}
+
+
+/*  Classes   */
 
 .party-detail-name {
     font-family: Sacramento;
@@ -65,63 +114,26 @@ h4{
     margin-bottom: 40px;
 }
 
-p{
-    /* No, but really. Matt: */
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight:400;
-    color: #1F1F1F;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    margin-top:20px;
-}
-
-p a{
-    color: #D9AD8E;
-}
-
-strong{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight:600;
-    letter-spacing: 0.25px;
-    line-height: 20px;
-    color: #1F1F1F;
-}
-
-/*  IDs   */
-
-#side-home {
-    height:100vh;
-    align-content: center;
-}
-
-#footer {
-    height:60px;
-    border-top: 2px solid #F6E4D8;
-    width:50%;
-    transform:translateX(50%);
-}
-
-iframe{
-    margin-top:60px;
-    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
-}
-
-/*  Classes   */
 .image-container {
     width:100%;
     height:100%;
     top:0;
     position: absolute;
-    opacity: 0.375;
+    opacity: 1;
+    overflow: hidden;
+    /*
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../slideshow-small/1.jpg");
+    background-image: url("../slideshow-small/9.jpg");*/
 }
 
-.left-box{
+.image-container img {
+    width:100%;
+    object-fit: cover;
+}
+
+.left-box {
     background-color: white;
     float:left;
     width:60%;
@@ -131,21 +143,21 @@ iframe{
     overflow: hidden;
 }
 
-.right-box{
+.left-box img {
+    opacity: 1;
+    top:0;
+    height:100%;
+    position: absolute;
+}
+
+.right-box {
     height:100%;
     background: white;
     float:right;
     width:40%;
 }
 
-.left-box img{
-    opacity: .5;
-    top:0;
-    height:100%;
-    position: absolute;
-}
-
-.left-box-title-text{
+.left-box-title-text {
     /* Matt & Amy: */
     font-family: Sacramento-Regular;
     font-size: 72px;
@@ -154,7 +166,7 @@ iframe{
     text-align: center;
 }
 
-.left-box-title-subtext{
+.left-box-title-subtext {
     /* 11.03.18: */
     font-family: Montserrat-SemiBold;
     font-size: 24px;
@@ -163,46 +175,46 @@ iframe{
     text-align: center;
 }
 
-.title-block{
+.title-block {
     text-shadow: 0 0 30px rgba(128,128,128, 0.5);
 }
 
-.vertical-center{
+.vertical-center {
     text-align: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.spacer{
+.spacer {
     height:20px;
 }
 
-.title-text{
+.title-text {
     /* Viansa Winery: */
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 20px;
-    color: #1E1E1E;
+    font-size: 24px;
+    color: #2C344C;
     letter-spacing: 3.75px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.title-location{
+.title-location {
     /* Sonoma, California: */
     font-family: Montserrat;
-    font-size: 16px;
-    color: #7E7E7E;
+    font-size: 18px;
+    color: #727272;
     letter-spacing: 1.75px;
     text-align: center;
     margin-top: 6px;
 }
 
-.title-date{
+.title-date {
     /* November 3rd, 2018: */
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 14px;
     color: #ADADAD;
     letter-spacing: 2.5px;
     text-align: center;
@@ -210,7 +222,7 @@ iframe{
     text-transform: uppercase;
 }
 
-.button{
+.button {
     /* RSVP: */
     width:128px;
     height:42px;
@@ -241,7 +253,9 @@ iframe{
     margin-bottom: 60px;
 }
 
+
 /*  Takeovers  */
+
 .left-side-takeover-container {
     visibility: hidden;
     float:left;
@@ -306,7 +320,7 @@ iframe{
     z-index:1;
 }
 
-#input-field{
+#input-field {
     margin-top:20px;
 }
 
@@ -325,17 +339,17 @@ iframe{
   object-fit: cover;
 }
 
-fieldset{
+fieldset {
     padding:0;
     border:none;
 }
 
-.asterisk{
+.asterisk {
     padding-left:5px;
     color: #ADADAD;
 }
 
-label{
+label {
     font-family: Montserrat;
     font-size: 14px;
     font-weight:500;
@@ -345,7 +359,7 @@ label{
     margin-top:20px;
 }
 
-input, textarea{
+input, textarea {
     border: 2px solid #E9E9E9;
     height:40px;
     box-sizing: border-box;
@@ -367,21 +381,21 @@ input, textarea{
     cursor: pointer;
 }
 
-textarea{
+textarea {
     height:60px;
 }
 
-.two-column-left{
+.two-column-left {
     float:left;
     width:50%;
 }
 
-.two-column-right{
+.two-column-right {
     float:right;
     width:50%;
 }
 
-.side-by-side{
+.side-by-side {
     display: flex;
 }
 
@@ -405,7 +419,7 @@ textarea{
     align-content: center;
 }
 
-.form-actions button{
+.form-actions button {
     display: flex;
     justify-content: center;
     line-height: 0px;
@@ -418,7 +432,7 @@ textarea{
     flex-wrap: wrap;
 }
 
-.image-grid img{
+.image-grid img {
     margin-right:2px;
     margin-top: 2px;
     width:120px;
@@ -429,6 +443,20 @@ textarea{
     transition: .5s opacity;
 }
 
-.image-grid img:hover{
+.image-grid img:hover {
     opacity:1;
+}
+
+
+/*  Media Queries  */
+
+@media screen and (max-width: 750px) {
+    
+    .left-box {
+        width:50%;
+    }
+    
+    .right-box {
+        width:50%;
+    }
 }

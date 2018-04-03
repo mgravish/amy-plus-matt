@@ -1,9 +1,8 @@
-/*
-  
-    Menu Buttons
-  
-*/
 
+
+
+
+/*  Menu Buttons  */
 
 $('#rsvp-btn').on('click', function(e) {  // Click RSVP
     
@@ -50,13 +49,11 @@ $('#close-party').on('click', function(e) { // Click to close party
         $('#wedding-party-detail-container').css('visibility','hidden');
     
 });
-                   
 
-/*
 
-    Wedding Party Image Handlers
 
-*/
+
+/*  Wedding Party Image Handlers  */
 
 $('.image-grid').on('click','img',function(e){
     var partyName = this.id;
@@ -111,11 +108,7 @@ $('.image-grid').on('click','img',function(e){
 
 
 
-/*
-  
-    Form Submission Functions
-  
-*/
+/*  Form Submission Functions  */
 
 var $form = $('form#rsvp-form');
 var url = 'https://script.google.com/macros/s/AKfycbxiFy960d1e8dLsEAVOxD5pEOIlXrlCvZ0FzYawNr3-fbm73Fq-/exec';
@@ -142,4 +135,28 @@ $('#rsvp-form').on('submit',function(e) {
             }
         });
         return false;
+});
+
+
+
+
+/*  Scroll Slideshow  */
+
+$(document).scroll(function () {
+    var h = $( window ).height();
+    var y = $(this).scrollTop();
+    if (y > h) {
+        $('#img2').fadeIn({});
+    }
+    else {$('#img2').fadeOut('fast')};
+    
+    if (y > h*2) {
+        $('#img3').fadeIn({});
+    }
+    else {$('#img3').fadeOut('fast')};
+    
+    if (y > h*3) {
+        $('#img4').fadeIn({});
+    }
+    else {$('#img4').fadeOut('fast')};
 });
