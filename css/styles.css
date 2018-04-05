@@ -1,4 +1,4 @@
-/*  Text Styles */
+/*  Global Styles */
 
 body {
     height: 100vh;
@@ -69,6 +69,42 @@ strong {
     color: #2C344C;
 }
 
+label {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight:500;
+    color: #1F1F1F;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin-top:20px;
+}
+
+input, textarea {
+    border: 2px solid #E9E9E9;
+    height:40px;
+    box-sizing: border-box;
+    width:100%;
+    resize: none;
+    font-family: Montserrat;
+    padding-left:6px;
+    font-size: 12px;
+}
+
+textarea {
+    height:60px;
+}
+
+fieldset {
+    padding:0;
+    border:none;
+}
+
+iframe {
+    margin-top:60px;
+    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
+}
+
+
 
 /*  IDs   */
 
@@ -86,10 +122,10 @@ strong {
     transform:translateX(50%);
 }
 
-iframe {
-    margin-top:60px;
-    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
+#input-field {
+    margin-top:20px;
 }
+
 
 
 /*  Classes   */
@@ -254,6 +290,7 @@ iframe {
 }
 
 
+
 /*  Takeovers  */
 
 .left-side-takeover-container {
@@ -320,10 +357,6 @@ iframe {
     z-index:1;
 }
 
-#input-field {
-    margin-top:20px;
-}
-
 .spotlight-image {
     box-sizing: border-box;
     position: relative;
@@ -339,35 +372,9 @@ iframe {
   object-fit: cover;
 }
 
-fieldset {
-    padding:0;
-    border:none;
-}
-
 .asterisk {
     padding-left:5px;
     color: #ADADAD;
-}
-
-label {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight:500;
-    color: #1F1F1F;
-    letter-spacing: 0.5px;
-    line-height: 20px;
-    margin-top:20px;
-}
-
-input, textarea {
-    border: 2px solid #E9E9E9;
-    height:40px;
-    box-sizing: border-box;
-    width:100%;
-    resize: none;
-    font-family: Montserrat;
-    padding-left:6px;
-    font-size: 12px;
 }
 
 .close-btn {
@@ -379,10 +386,6 @@ input, textarea {
     height:16px;
     background-color:white;
     cursor: pointer;
-}
-
-textarea {
-    height:60px;
 }
 
 .two-column-left {
