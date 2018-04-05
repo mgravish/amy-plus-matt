@@ -1,7 +1,7 @@
 /*  Scroll Slideshow  */
 
 $(document).scroll(function () {
-    var h = $( window ).height();
+    var h = $( window ).height()-400;
     var y = $(this).scrollTop();
     if (y > h) {
         $('#img2').fadeIn({});
