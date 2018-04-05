@@ -9,21 +9,22 @@ body {
 
 h1 {
     font-family: Montserrat;
-    font-weight: 600;
-    border-bottom: 5px solid #F4D2BA;
+    font-weight: 800;
+    border-bottom: 5px solid #f7c7a9;
     display: inline-block;
     line-height: 48px;
     font-size: 24px;
     color: #2C344C;
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 h2 {
     /* Hotel Petaluma: */
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 18px;
     color: #2C344C;
     letter-spacing: 0.86px;
 }
@@ -31,15 +32,16 @@ h2 {
 h3 {
     font-family: Montserrat;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #7E7E7E;
     letter-spacing: 1.75px;
+    margin-top:14px;
 }
 
 h4 {
     font-family: Montserrat;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     letter-spacing: .5px;
     margin-top:40px;
@@ -53,12 +55,14 @@ p {
     color: #1F1F1F;
     letter-spacing: 0.5px;
     line-height: 24px;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 p a {
-    color: #D9AD8E;
+    color: #e2b088;
 }
+
+
 
 strong {
     font-family: Montserrat;
@@ -100,8 +104,9 @@ fieldset {
 }
 
 iframe {
-    margin-top:60px;
-    box-shadow: 0 0 40px rgba(128,128,128, 0.25);
+    margin-top:30px;
+    border: 1px solid #f7c7a9;
+    box-shadow: 0 0 40px rgba(160,160,160, 0.20);
 }
 
 
@@ -111,8 +116,8 @@ iframe {
 #side-home {
     height:100vh;
     align-content: center;
-    background-image: url("../slideshow-small/paper-texture-light.png");
-    background-size: cover;
+    background-image: url("../imgs/texture/groovepaper.png");
+    background-repeat: repeat;
 }
 
 #footer {
@@ -205,6 +210,7 @@ iframe {
 .left-box-title-subtext {
     /* 11.03.18: */
     font-family: Montserrat;
+    font-weight: 700;
     font-size: 24px;
     color: white;
     letter-spacing: 15px;
@@ -230,9 +236,9 @@ iframe {
     /* Viansa Winery: */
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 24px;
-    color: #2C344C;
-    letter-spacing: 3.75px;
+    font-size: 34px;
+    color: #f7c7a9/*black /*#2C344C*/;
+    letter-spacing: 8px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -240,21 +246,24 @@ iframe {
 .title-location {
     /* Sonoma, California: */
     font-family: Montserrat;
-    font-size: 18px;
+    font-weight:500;
+    font-size: 22px;
     color: #727272;
-    letter-spacing: 1.75px;
+    letter-spacing: 2.5px;
     text-align: center;
-    margin-top: 6px;
+    margin-top: 12px;
+    
 }
 
 .title-date {
     /* November 3rd, 2018: */
     font-family: Montserrat;
-    font-size: 14px;
-    color: #ADADAD;
-    letter-spacing: 2.5px;
+    font-weight:500;
+    font-size: 16px;
+    color: #727272;
+    letter-spacing: 4px;
     text-align: center;
-    margin-top: 26px;
+    margin-top: 100px;
     text-transform: uppercase;
 }
 
@@ -282,10 +291,11 @@ iframe {
     align-content: center;
     background-color: white;
     box-sizing: border-box;
-    border-top: 1px solid #F6E4D8;
-    padding-top: 60px;
+    border-top: 1px solid #f7c7a9;
+    padding-top: 100px;
     padding-left: 60px;
     padding-right: 60px;
+    padding-bottom:100px;
     margin-bottom: 60px;
 }
 
