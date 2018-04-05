@@ -486,6 +486,16 @@ iframe {
         width:100%;
     }
     
+    .left-box-title-text {
+        /* Matt & Amy: */
+        font-size: 60px;
+    }
+
+    .left-box-title-subtext {
+        /* 11.03.18: */
+        font-size: 20px;
+    }
+    
     #side-home {
         height:300px;
         margin-top:300px;
