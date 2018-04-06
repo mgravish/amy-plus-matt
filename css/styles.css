@@ -476,14 +476,29 @@ iframe {
         height:300px;
         z-index: 1;
         position: fixed;
-        -webkit-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.17);
-        -moz-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.17);
-        box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.17);
+        -webkit-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
+        -moz-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
+        box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
+        -webkit-transition: -webkit-box-shadow 1s, height .5s;
+        transition: -moz-box-shadow 1s, box-shadow 1s, height .5s;
     }
     
     .right-box {
         position: absolute;
+        top:340px;
         width:100%;
+    }
+    
+    .side-block {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    #side-home {
+        height:340px;
+        padding-bottom: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     
     .left-box-title-text {
@@ -496,8 +511,17 @@ iframe {
         font-size: 20px;
     }
     
-    #side-home {
-        height:300px;
-        margin-top:300px;
+    .title-text {
+        font-size: 36px;
     }
+    
+    .title-location {
+        font-size: 20px;
+    }
+    
+    .title-date{
+        margin-top: 14px;
+        font-size: 14px;
+    }
+
 }
