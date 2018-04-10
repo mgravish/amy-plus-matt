@@ -30,7 +30,16 @@ h2 {
 }
 
 h2 a{
-    color: #e2b088;
+    color: #2C344C !important;
+    padding-bottom: 2px;
+    text-decoration: none;
+    -webkit-transition: color .15s; /* Safari */
+    transition: color .15s;
+}
+
+h2 a:hover {
+    color: #f7c7a9 !important;
+    border-bottom: 2px solid  #f7c7a9;
 }
 
 h2 a:visited {
@@ -289,6 +298,14 @@ iframe {
     text-transform: uppercase;
 }
 
+.caption {
+    padding-top: 20px;
+    font-size:9px;
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 2px;
+}
+
 .button {
     /* RSVP: */
     width:128px;
@@ -328,6 +345,7 @@ iframe {
     width: 55vw;
     opacity: .75;
     object-fit: cover;
+    margin-bottom:20px;
 }
 
 /*  Takeovers  */
