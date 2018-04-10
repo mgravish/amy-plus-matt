@@ -29,6 +29,14 @@ h2 {
     letter-spacing: 0.86px;
 }
 
+h2 a{
+    color: #e2b088;
+}
+
+h2 a:visited {
+    color: #e2b088;
+}
+
 h3 {
     font-family: Montserrat;
     font-weight: 400;
@@ -61,8 +69,6 @@ p {
 p a {
     color: #e2b088;
 }
-
-
 
 strong {
     font-family: Montserrat;
@@ -183,7 +189,7 @@ iframe {
 .left-box {
     background-color: white;
     float:left;
-    width:60%;
+    width:45%;
     height:100%;
     position:fixed;
     top:0;
@@ -201,13 +207,21 @@ iframe {
     height:100%;
     background: white;
     float:right;
-    width:40%;
+    width:55%;
+}
+
+.right-box-names {
+    font-family: Sacramento;
+    font-size: 72px;
+    color: #f7c7a9;
+    letter-spacing: 0;
+    text-align: center;
 }
 
 .left-box-title-text {
     /* Matt & Amy: */
     font-family: Sacramento;
-    font-size: 96px;
+    font-size: 80px;
     color: white;
     letter-spacing: 0;
     text-align: center;
@@ -224,6 +238,7 @@ iframe {
 }
 
 .title-block {
+    display:none;
    /* text-shadow: 0 0 30px rgba(128,128,128, 0.5);*/
 }
 
@@ -242,9 +257,10 @@ iframe {
     /* Viansa Winery: */
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 34px;
-    color: #f7c7a9/*black /*#2C344C*/;
+    font-size: 22px;
+    color: #727272;
     letter-spacing: 8px;
+    margin-top:40px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -257,7 +273,7 @@ iframe {
     color: #727272;
     letter-spacing: 2.5px;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 8px;
     
 }
 
@@ -305,7 +321,14 @@ iframe {
     margin-bottom: 60px;
 }
 
-
+.side-block img {
+    position:relative;
+    left: -80px;
+    height: 300px;
+    width: 55vw;
+    opacity: .75;
+    object-fit: cover;
+}
 
 /*  Takeovers  */
 
@@ -471,6 +494,10 @@ iframe {
 
 @media screen and (max-width: 960px) {
     
+    body {
+        width:100%;
+    }
+    
     .left-box {
         width:100%;
         height:300px;
@@ -494,11 +521,24 @@ iframe {
         padding-right: 40px;
     }
     
+    .side-block img {
+    position:relative;
+    left: -40px;
+    height: 300px;
+    width: 100vw;
+    opacity: .75;
+    object-fit: cover;
+    }   
+    
     #side-home {
         height:340px;
         padding-bottom: 80px;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .right-box-names {
+        font-size:60px;
     }
     
     .left-box-title-text {
@@ -512,11 +552,14 @@ iframe {
     }
     
     .title-text {
-        font-size: 36px;
+        font-size: 20px;
+        margin-bottom: 26px;
+        letter-spacing: 5px;
     }
     
     .title-location {
-        font-size: 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
     }
     
     .title-date{
