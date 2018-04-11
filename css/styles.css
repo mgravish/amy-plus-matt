@@ -190,6 +190,7 @@ iframe {
 
 .sticky-header{
     position: sticky;
+    position: -webkit-sticky;
     top: 0px;
     background-color: rgba(255, 255, 255, .9);
     width: 55vw;
