@@ -121,13 +121,13 @@ $('#rsvp-form').on('submit',function(e) {
             $(btn).css({ border:"none", cursor: "auto", color: "gray"});
             $(btn).hide();
             $('#rsvp-btn').fadeOut('fast');
-            $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;'>Your RSVP has been sent.<br>Thanks!</p>").find('.response').fadeIn('slow');
+            $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;max-width:none;'>Your RSVP has been sent.<br>Thanks!</p>").find('.response').fadeIn('slow');
             $('#rsvp-form').find("input[type=text], textarea").prop("readonly",true);
             $('#rsvp-form').find("input[type=text], textarea").css({ background:"#fcfcfc" });
-           setTimeout(function(){              $('#rsvp-form-container').delay(8000).css('transform','translateY(-100vh)');
-                $('#rsvp-form').css('opacity','0.0');
-                $('#rsvp-form-container').css('background-color','rgba(244,210,186, 0)');
-                }, 1500);
+           setTimeout(function(){              
+                $('.left-side-takeover-content').css('transform','translateY(-100vh)');
+                $('.left-side-takeover-container').css('visibility','hidden');
+                }, 1800);
             }
         });
         return false;
