@@ -54,6 +54,7 @@ h3 {
     color: #7E7E7E;
     letter-spacing: 1.75px;
     margin-top:14px;
+    line-height: 24px;
 }
 
 h4 {
@@ -153,7 +154,6 @@ iframe {
 #img3 {
     object-position: center 30%;
 }
-
 
 /*  Classes   */
 
@@ -373,7 +373,7 @@ iframe {
 .left-side-takeover-container {
     visibility: hidden;
     float:left;
-    width:60%;
+    width:45%;
     height:100%;
     position:fixed;
     top:0;
@@ -480,6 +480,7 @@ iframe {
 }
 
 .copy-block {
+    align-content: center;
     text-align: center;
 }
 
@@ -495,7 +496,8 @@ iframe {
 }
 
 .form-actions {
-    margin-top:20px;
+    position: relative;
+    margin-top:40px;
     align-content: center;
 }
 
@@ -533,6 +535,10 @@ iframe {
 @media screen and (max-width: 960px) {
     
     body {
+        width:100%;
+    }
+    
+    .left-side-takeover-container {
         width:100%;
     }
     

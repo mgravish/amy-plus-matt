@@ -8,7 +8,7 @@ $('#rsvp-btn').on('click', function(e) {  // Click RSVP
     
         $('#rsvp-form').css('transform','translateY(0%)');
         $('#rsvp-form').css('opacity','1.0');
-        $('#rsvp-form-container').css('background-color','rgba(244,210,186, 0.65)');
+        $('#rsvp-form-container').css('background-color','rgba(255,255,255, 0.65)');
         $('#rsvp-form-container').css('visibility','visible');
 });
 
