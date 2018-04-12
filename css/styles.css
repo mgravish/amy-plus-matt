@@ -383,6 +383,7 @@ iframe {
     transition: .5s background visibility;
     transition-delay: .15s;
     transition-timing-function: ease-in-out;
+    z-index: 3;
 }
 
 .right-side-takeover-container {
@@ -405,8 +406,8 @@ iframe {
     align-items: center;
     box-sizing: border-box;
     background-color:white;
-    box-shadow: 0 0 40px rgba(128,128,128, 0.5);
-    opacity: 0;
+    /*box-shadow: 0 0 40px rgba(128,128,128, 0.5);*/
+    opacity: 1;
     top:0;
     bottom:0;
     height:100%;
@@ -416,6 +417,7 @@ iframe {
     transition: .5s all;
     transition-timing-function: ease-in-out;
     overflow: scroll;
+    z-index: 4;
 }
 
 .right-side-takeover-content {
@@ -540,6 +542,15 @@ iframe {
     
     .left-side-takeover-container {
         width:100%;
+        height:100%;
+        z-index: 1;
+    }
+    
+    .left-side-takeover-content{
+        z-index: 4;
+        -webkit-box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
     }
     
     .image-container {
@@ -554,11 +565,11 @@ iframe {
         object-position: center 30%;
     }
     
-    #img3{
+    #img3 {
         object-position: center center;
     }
     
-    #img4{
+    #img4 {
         object-position: center 30%;
     }
     
@@ -567,20 +578,18 @@ iframe {
         height:300px;
         z-index: 2;
         position: fixed;
-        -webkit-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
-        -moz-box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
-        box-shadow: 0px 0px 73px 0px rgba(0,0,0,0.0);
-        -webkit-transition: -webkit-box-shadow 1s, height .5s;
-        transition: -moz-box-shadow 1s, box-shadow 1s, height .5s;
+        overflow: visible;
+        -webkit-transition: height .5s;
+        transition: height .5s;
     }
     
-    .sticky-header{
+    .sticky-header {
         top:300px;
         width:100vw;
         margin-left: -40px;
     }
     
-    h1{
+    h1 {
         margin-left:40px;
     }
     
@@ -588,6 +597,7 @@ iframe {
         position: absolute;
         top:340px;
         width:100%;
+        z-index: 1;
     }
     
     .content-block {

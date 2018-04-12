@@ -6,21 +6,16 @@
 
 $('#rsvp-btn').on('click', function(e) {  // Click RSVP
     
-        $('#rsvp-form').css('transform','translateY(0%)');
-        $('#rsvp-form').css('opacity','1.0');
-        $('#rsvp-form-container').css('background-color','rgba(255,255,255, 0.65)');
-        $('#rsvp-form-container').css('visibility','visible');
+        $('.left-side-takeover-content').css('transform','translateY(0%)');
+        $('.left-side-takeover-container').css('visibility','visible');
 });
 
 
 $('#close-rsvp').on('click', function(e) {  // Click to close RSVP
 
-        $('#rsvp-form').css('transform','translateY(-100vh)');
-        $('#rsvp-form').css('opacity','0.0');
-        $('#rsvp-form-container').css('background-color','rgba(244,210,186, 0)');
-        $('#rsvp-form-container').css('visibility','hidden');
-    }
-);
+        $('.left-side-takeover-content').css('transform','translateY(-100vh)');
+        $('.left-side-takeover-container').css('visibility','hidden');
+});
 
 
 $('#party-btn').on('click', function(e) { // Click Party
@@ -125,6 +120,7 @@ $('#rsvp-form').on('submit',function(e) {
             $(btn).attr("disabled","disabled");
             $(btn).css({ border:"none", cursor: "auto", color: "gray"});
             $(btn).hide();
+            $('#rsvp-btn').fadeOut('fast');
             $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;'>Your RSVP has been sent.<br>Thanks!</p>").find('.response').fadeIn('slow');
             $('#rsvp-form').find("input[type=text], textarea").prop("readonly",true);
             $('#rsvp-form').find("input[type=text], textarea").css({ background:"#fcfcfc" });

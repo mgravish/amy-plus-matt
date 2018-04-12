@@ -15,7 +15,7 @@ $(document).scroll(function () {
         $('#img2').fadeIn({});
     }
     else {
-        $('#img2').fadeOut('fast')
+        $('#img2').fadeOut('fast');
         $('.title-block').fadeOut('fast');
     };
     
