@@ -1,33 +1,30 @@
-
-
-
-
 /*  Menu Buttons  */
 
 $('#rsvp-btn').on('click', function(e) {  // Click RSVP
-    
-        $('.left-side-takeover-content').css('transform','translateY(0%)');
-        $('.left-side-takeover-container').css('visibility','visible');
+        $('#rsvp-form').css('visibility','visible');
+        $('#rsvp-form').css('transform','translateY(0%)');
+        $('#rsvp-form-container').css('visibility','visible');
 });
 
 
 $('#close-rsvp').on('click', function(e) {  // Click to close RSVP
 
-        $('.left-side-takeover-content').css('transform','translateY(-100vh)');
-        $('.left-side-takeover-container').css('visibility','hidden');
+        $('#rsvp-form').css('transform','translateY(-100vh)');
+        $('#rsvp-form-container').css('visibility','hidden');
+        $('#rsvp-form').css('visibility','hidden');
 });
 
 
 $('#party-btn').on('click', function(e) { // Click Party
     
     //Left Side
+        $('#wedding-party-content').css('visibility','visible');
         $('#wedding-party-content').css('transform','translateY(0%)');
-        $('#wedding-party-content').css('opacity','1.0');
-        $('#wedding-party-container').css('background-color','rgba(244,210,186, 0.65)');
         $('#wedding-party-container').css('visibility','visible');
     //Right Side
-        $('#wedding-party-detail-container').css('opacity','1.0');
-        $('#wedding-party-detail-container').css('visibility','visible');
+        $('.right-side-takeover-container').css('visibility','visible');
+        $('.right-side-takeover-container').css('opacity','1');
+        
 
 });
 
@@ -36,12 +33,11 @@ $('#close-party').on('click', function(e) { // Click to close party
     
     //Left Side
         $('#wedding-party-content').css('transform','translateY(-100vh)');
-        $('#wedding-party-content').css('opacity','0.0');
-        $('#wedding-party-container').css('background-color','rgba(244,210,186, 0)');
         $('#wedding-party-container').css('visibility','hidden');
+        $('#wedding-party-content').css('visibility','hidden');
     //Right Side
-        $('#wedding-party-detail-container').css('opacity','0.0');
-        $('#wedding-party-detail-container').css('visibility','hidden');
+        $('.right-side-takeover-container').css('visibility','hidden');
+        $('.right-side-takeover-container').css('opacity','0');
     
 });
 
@@ -62,7 +58,7 @@ $('.image-grid').on('click','img',function(e){
         var name = "Kelly Havens";
         var title = "Matron of Honor";
         var content = "Kelly is Amy's sister, and has been for her whole life.";
-        var source = "imgs/cover/kelly.jpg"
+        var source = "imgs/cover/kelly.jpg";
     }
     
     //Isabel Bio
@@ -91,6 +87,7 @@ $('.image-grid').on('click','img',function(e){
         var name = "Nick Gravish";
         var title = "Groomsman";
         var content = "Nick is Matt's brother.";
+        var source = "imgs/cover/nick.jpg";
     }
     
     
