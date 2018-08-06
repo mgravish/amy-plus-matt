@@ -5,6 +5,7 @@ body {
     width: 100%;
     margin: 0;
     background-color: white;
+    font-family: Montserrat;
 }
 
 h1 {
@@ -103,13 +104,14 @@ label {
 
 input, textarea {
     border: 2px solid #E9E9E9;
-    height:40px;
+    font-weight: 500;
+    padding: 16px;
     box-sizing: border-box;
     width:100%;
     resize: none;
     font-family: Montserrat;
-    padding-left:6px;
-    font-size: 12px;
+    padding-left:16px;
+    font-size: 16px;
 }
 
 textarea {
@@ -155,7 +157,54 @@ iframe {
     object-position: center 30%;
 }
 
+#scroll-reminder {
+    position: fixed;
+    width: 55%;
+    text-align: center;
+    bottom:20px;
+    right:0;
+    z-index: 1;
+    font-family: Montserrat;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: rgb(180,180,180);
+}
+
+#scroll-text{
+    display:none;
+}
+
+#wedding-party-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#wedding-party-header {
+/*    align-self: flex-start;*/
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: left;
+    color: #2C344C;
+    border-bottom: 5px solid #f7c7a9;
+}
+
 /*  Classes   */
+.party-title {
+    font-family: Sacramento;
+    letter-spacing: .5px;
+    color: rgb(25,25,25);
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    padding-bottom: 0px;
+}
 
 .right-box {
     height:100%;
@@ -203,24 +252,32 @@ iframe {
     margin-bottom: 120px;
 }
 
+.party-detail{
+/*    margin:20px;*/
+}
+
 .party-detail-name {
     font-family: Sacramento;
     font-size: 36px;
-    margin-top:60px;
+    margin-top:0px;
     color: #191919;
-    letter-spacing: 0;
+    letter-spacing: 1px;
     font-weight:100;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .party-detail-title {
     font-family: Montserrat;
     font-weight:600;
     font-size: 14px;
-    color: #F4D2BA;
+    color: rgb(180,180,180);
     letter-spacing: 1.75px;
     text-transform: uppercase;
-    margin-top:10px;
-    margin-bottom: 40px;
+    padding-top: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
 }
 
 .image-container {
@@ -231,12 +288,6 @@ iframe {
     position: absolute;
     opacity: 1;
     overflow: hidden;
-
-    /*
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../slideshow-small/9.jpg");*/
 }
 
 .image-container img {
@@ -252,10 +303,9 @@ iframe {
     position: absolute;
 }
 
-
 .right-box-names {
     font-family: Sacramento;
-    font-size: 72px;
+    font-size: 60px;
     color: #f7c7a9;
     letter-spacing: 0;
     text-align: center;
@@ -302,6 +352,10 @@ iframe {
 
 .spacer {
     height:20px;
+}
+
+.rad-5 {
+    border-radius: 5px;
 }
 
 .title-text {
@@ -381,82 +435,117 @@ iframe {
 
 /*  Takeovers  */
 
-.left-side-takeover-container {
+.hidden {
     visibility: hidden;
+}
+
+.opacity-1 {
+    opacity: 1 !important;
+}
+
+.opacity-half {
+    opacity: 0.5 !important;
+}
+
+.flex-column { 
+    display:flex;
+    flex-direction: column;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.no-bg {
+    background-color: rgba(255,255,255,0);
+}
+
+.up {
+    transform: translateY(-100vh);
+}
+
+.down {
+    transform: translateY(0%);
+}
+
+.transition {
+    transition: all 0.5s;
+    transition-delay: .15s;
+    transition-timing-function: ease-in-out;
+}
+
+.shadow {
+    box-shadow: 0px 10px 59px -13px rgba(120,120,120,1);
+}
+
+.left-side {
     float:left;
     width:45%;
     height:100%;
     position:fixed;
     top:0;
-    box-sizing: border-box;
-    padding: 40px;
-    background-color: rgba(244,210,186, 0);
-    transition: .5s background visibility;
-    transition-delay: .15s;
-    transition-timing-function: ease-in-out;
-    z-index: 3;
 }
 
-.right-side-takeover-container {
-    visibility: hidden;
+.padding-80 {
+    box-sizing: border-box;
+    padding: 80px;
+}
+
+.padding-60 {
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.padding-0 {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.right-side {
     float:right;
     width:55%;
     height:100%;
     position:fixed;
     top:0;
-    opacity: 0;
-    box-sizing: border-box;
-    padding: 0px;
-    transition: .25s all;
+    right:0;
+    transition: all 0.5s;
     transition-delay: .15s;
     transition-timing-function: ease-in-out;
-    z-index: 2;
 }
 
-.left-side-takeover-content {
-    align-items: center;
-    box-sizing: border-box;
-    background-color:white;
-    /*box-shadow: 0 0 40px rgba(128,128,128, 0.5);*/
-    opacity: 1;
-    top:0;
-    bottom:0;
+.overlay {
+    z-index: 10;
+}
+
+.white-bg {
+    background-color: rgba(255,255,255, 1.0);
+}
+
+.semi-white-bg {
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.wh-100 {
     height:100%;
     width:100%;
-    padding:40px;
-    transform: translateY(-100vh);
-    transition: .5s all;
-    transition-timing-function: ease-in-out;
-    overflow: scroll;
-    z-index: 4;
-}
-
-.right-side-takeover-content {
-    align-items: center;
-    box-sizing: border-box;
-    background-color:white;
     top:0;
     bottom:0;
-    height:100%;
-    width:100%;
-    padding-left: 60px;
-    padding-right: 60px;
-    transition: .5s all;
-    transition-timing-function: ease-in-out;
-    overflow: scroll;
-    z-index:1;
 }
 
-.spotlight-image {
+.center {
+    align-items: center;
+}
+
+#spotlight-image {
     box-sizing: border-box;
     position: relative;
     width:100%;
-    height:340px;
+    height:40%;
     overflow: hidden;
     background-color: white;
 }
 
-.spotlight-image img{
+#spotlight-image img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -469,14 +558,24 @@ iframe {
 }
 
 .close-btn {
-    display:block;
-    position: relative;
-    top: 0px;
-    float:right;
-    width:16px;
-    height:16px;
+    color: rgb(200,200,200);
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    float: right;
     background-color:white;
     cursor: pointer;
+}
+
+.close-btn i {
+    font-size: 26px;
+}
+
+
+/* Form Styles */
+
+.mt-20 {
+    margin-top: 20px;
 }
 
 .two-column-left {
@@ -518,38 +617,272 @@ iframe {
 .form-actions button {
     display: flex;
     justify-content: center;
-    line-height: 0px;
+/*    line-height: 0px;*/
     background-color: white;
 }
 
-.image-grid {
-    width:100%;
+
+/* Image Grid Styles */
+
+.flex-col {
     display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:50%;
+}
+
+.flex-row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
     flex-wrap: wrap;
-}
-
-.image-grid img {
-    margin-right:4px;
-    margin-top: 4px;
-    width:108px;
-    height:108px;
-    position: relative;
-    background-color:red;
     cursor: pointer;
-    transition: .5s opacity;
+    align-content: flex-start;
 }
 
-.image-grid img:hover {
-    opacity:1;
+.thumb {
+    margin: 2px;
+    width: calc(100% / 3 - 2px);
+    height: calc(100% / 3 - 2px);
+    background-position: center; 
+    background-size: cover;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: .7;
+    position: relative;
+    cursor: pointer;
+    transition: .25s opacity; 
 }
 
+
+/* Header Nav Styles */
+
+.header-nav {
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 2;
+    width: 100%;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.header-nav li {
+    flex-basis: 20%;
+    list-style-type: none;
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+    align-self: center;
+}
+
+.header-nav li:hover {
+    color: #F4D2BA;
+}
+
+#hamburger {
+    display: none;
+    color: #F4D2BA;
+    cursor: pointer;
+}
+
+#rsvp-form {
+    overflow-y: scroll;
+}
+
+#rsvp-header {
+    font-family: Sacramento;
+    font-size: 40px;
+}
 
 /*  Media Queries  */
+
+@media screen and (max-width: 1440px) {
+    
+    .padding-60 {
+        padding: 40px;
+    }
+    
+    #wedding-party-content {
+        padding: 30px;
+    }
+    
+    .header-nav {
+        top:20px;
+        left:20px;
+    }
+    
+    .header-nav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    
+    .header-nav li {
+        text-align: left;
+        font-size: 20px;
+        align-self: flex-start;
+    }
+}
 
 @media screen and (max-width: 960px) {
     
     body {
         width:100%;
+    }
+    
+    #left-overlay--rsvp {
+        height: 100vh;
+        padding: 20px;
+    }
+    
+    .opacity-half {
+        opacity: 0!important;
+    }
+    
+    #rsvp-form {
+        padding: 20px;
+    }
+    
+    .right-side {
+        left:0;
+        top: 25vh;
+        width: 100%;
+        height: 75vh;
+        overflow: scroll;
+    }
+    
+    .left-side {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 25vh;
+    }
+    
+    .padding-60 {
+        padding:0;
+    }
+    
+    .padding-80 {
+        padding: 20px;
+    }
+    
+    .image-grid {
+        height: 10vh;
+    }
+    
+    #spotlight-image {
+        position: fixed;
+        top: 25vh;
+        height: 25vh;
+    }
+    
+    #wedding-party-h1 p {
+        border-bottom: 5px solid #f7c7a9;
+        line-height: 24px;
+        display: inline-block;
+        font-weight: 800;
+        color: #2C344C;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        vertical-align: bottom;
+        margin-bottom: -4px;
+    }
+    
+    #wedding-party-h1 {
+        top: 0;
+        margin-left: -20px;
+        padding-left: 20px;
+        background-color: rgba(255,255,255,.9);
+        width: calc(100% + 20px);
+        font-size: 20px;
+        position: sticky;
+        position: -webkit-sticky;
+    }
+    
+    #wedding-party-detail-content {
+        position: fixed;
+        padding-top:0;
+        top: 50vh;
+        height: 50vh;
+        overflow: scroll;
+    }
+    
+    .flex-row {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    
+    .flex-col {
+        justify-content:flex-start;
+    }
+    
+    .thumb {
+        width: 60px;
+        height: 60px;
+        flex: none;
+    }
+    
+    .close-btn {
+        right: 10px;
+        top: 10px;
+    }
+    
+    #hamburger {
+        display:block;
+        position: fixed;
+        top: 25px;
+        right: 20px;
+        font-size: 36px;
+        color: #F4D2BA;
+        z-index: 5;
+    }
+        
+    .header-nav {
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,.9);
+        transition: transform .5s ease-in-out;
+        transform: translateY(-100%);
+    }
+    
+    .down {
+        transform: translateY(0%)!important;
+    }
+    
+    .header-nav ul {
+        margin-top: 30px;
+    }
+    
+    .header-nav li {
+        color: #2C344C;
+        margin: 6px;
+        font-size:18px;
+        margin-left:20px;
+        font-weight: 600;
+        letter-spacing: 4px;
     }
     
     .vertical-center-left {
@@ -559,32 +892,16 @@ iframe {
         transform: translateY(-50%);
     }   
     
-    .left-side-takeover-container {
-        width:100%;
-        height:100%;
-        z-index: 1;
+    .party-title {
+        margin-top: 10px;
+        font-size: 26px;
+        margin-left: 10px;
     }
     
-    .left-side-takeover-content {
-        z-index: 4;
-        opacity: 1;
-        -webkit-box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 39px -14px rgba(0,0,0,0.75);
-    }
-    
-    .right-side-takeover-container {
-        width: 100%;
-        height: 400px;
-        z-index: 4;
-    }
-    
-    .spotlight-image {
-        height:100%;
-    }
-    
-    #cover-image {
-        z-index: 1;
+    #party-header {
+        margin-left: 10px;
+        padding-top: 10px;
+        font-size: 12px !important;
     }
     
     .image-container {
@@ -609,8 +926,9 @@ iframe {
     
     .left-box {
         width:100%;
-        height:300px;
-        z-index: 2;
+        height:220px;
+        padding:0px;
+        z-index: 7;
         position: fixed;
         overflow: visible;
         -webkit-transition: height .5s;
@@ -618,19 +936,28 @@ iframe {
     }
     
     .sticky-header {
-        top:300px;
+        top:220px;
         width:100vw;
         margin-left: -40px;
     }
     
     h1 {
         margin-left:40px;
+        font-size: 18px;
+    }
+    
+    .no-margin-bottom {
+        margin-bottom: 20px !important;
+        font-size: 16px!important;
+        padding-bottom: 4px !important;
+        margin-top: 20px;
+        line-height: 20px;
     }
     
     .right-box {
         position: absolute;
-        top:340px;
-        width:100%;
+        top: 100vh;
+        width: 100%;
         z-index: 1;
     }
     
@@ -648,40 +975,115 @@ iframe {
     }   
     
     #side-home {
-        height:340px;
-        padding-bottom: 80px;
+        position: relative;
+        top: 0px;
+        height: 100vh;
+        padding-bottom: 0px;
         padding-left: 40px;
         padding-right: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid #f7c7a9;
     }
     
     .right-box-names {
         font-size:60px;
     }
     
+    .party-title {
+        font-family: Montserrat;
+        color: rgb(120,120,120);
+        font-size: 12px;
+        text-transform: ;
+        font-weight: 500;
+        letter-spacing: .5px;
+        margin-bottom: 2px;
+    }
+    
     .left-box-title-text {
         /* Matt & Amy: */
-        font-size: 60px;
+        font-size: 48px;
     }
 
     .left-box-title-subtext {
         /* 11.03.18: */
-        font-size: 20px;
+        font-size: 16px;
+    }
+    
+    .right-box-names {
+        font-size: 46px;
     }
     
     .title-text {
-        font-size: 20px;
-        margin-bottom: 26px;
+        font-size: 16px;
+        margin-bottom: 4px;
+        margin-top: 0px;
         letter-spacing: 5px;
     }
     
     .title-location {
-        font-size: 18px;
+        margin-top:0px;
+        margin-bottom: 8px;
+        font-size: 16px;
         letter-spacing: 2px;
     }
     
-    .title-date{
-        margin-top: 14px;
-        font-size: 14px;
+    .title-date {
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 0px;
     }
+    
+    #scroll-reminder {
+        position: fixed;
+        bottom: 10px;
+        display: block;
+        z-index: 10;
+        width: 100%;
+        font-size: 12px;
+    }
+    #scroll-text{
+        color: white;
+    }
+    
+    .party-detail-name {
+        font-size: 30px;
+    }
+    
+    .embiggen {
+        height: 100vh!important;
+    }
+}
 
+@media screen and (max-width: 350px) {
+    
+    #spotlight-image {
+        height: 140px;
+    }
+    
+    .right-side {
+        position: fixed;
+        left:0;
+        top: 25vh;
+        width: 100%;
+        height: calc (100vh - 140px);
+        overflow: scroll;
+    }
+    
+    .left-side {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 140px;
+    }
+    
+    .thumb {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .image-grid {
+        height: 10vh;
+    }
 }

@@ -7,26 +7,268 @@
         <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
         <link rel="manifest" href="./site.webmanifest">
         <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="stylesheet" type="text/css" href="css/cs-select.css"/>
+        <link rel="stylesheet" type="text/css" href="css/photoswipe.css"/>
+        <link rel="stylesheet" href="css/default-skin/default-skin.css"> 
+		<link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
         <meta name="msapplication-TileColor" content="#2d89ef">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link  id="hostStyle" rel="stylesheet" href="css/styles.css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src='js/jquery-ui-touchpunch.js'></script>
         <script src="js/jquery.serialize-object.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/photoswipe.min.js"></script> 
+        <script src="js/photoswipe-ui-default.min.js"></script> 
     </head>
     <body>
+    <!-- WEDDING PARTY -->
+        <div id = 'left-overlay--party'
+          class = 'left-side
+                   padding-60
+                   no-bg
+                   hidden
+                   transition
+                   overlay'>
+            
+            <div id = 'left-content--party'
+              class = 'white-bg
+                       wh-100
+                       padding-60
+                       transition
+                       flex-column
+                       up'>
+
+                <div id = 'party-header'
+                  style = 'align-self: flex-start;
+                           color: rgb(200,200,200);
+                           letter-spacing: 2px;
+                           font-size:14px'>
+
+                            WEDDING PARTY
+</div>
+
+                <div id = 'close-party'
+                  class = 'close-btn'>
+
+                    <i class="material-icons">clear</i>
+
+</div>
+                <div class='flex-col'>
+                    <div class='image-grid'>
+                        <span class='party-title'>Bridesmaids</span>
+                        <div id='thumbnails' class='flex-row'>
+                            <div id='kelly' class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/kelly.jpg");'></div>
+                            <div id="isabel" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/isabel.jpg");'></div>
+                            <div id="christine" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/christine.jpg");'></div>
+                            <div id="andi" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/andi.jpg");'></div>
+                            <div id="leah" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/leah.jpg");'></div>
+                            <div id="sara" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/sara.jpg");'></div>
+                            <div id="katya" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/katya.jpg");'></div>
+                            <div id="madeleine" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/madeleine.jpg");'></div>
+                            <div id="tiffanie" class='thumb' style='background-image: url("/imgs/party-small/bridesmaids/tiffanie.jpg");'></div>
+                        </div>
+</div>
+                    <div class='image-grid'>
+                        <span class='party-title'>Groomsmen</span>
+                        <div id='thumbnails' class='flex-row'>
+                            <div id='nick' class='thumb' style='background-image: url("/imgs/party-small/groomsmen/nick.jpg");'></div>
+                            <div id="daniel" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/daniel.jpg");'></div>
+                            <div id="dash" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/dash.jpg");'></div>
+                            <div id="chris" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/chris.jpg");'></div>
+                            <div id="eric" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/eric.jpg");'></div>
+                            <div id="kyle" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/kyle.jpg");'></div>
+                            <div id="dave" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/dave.jpg");'></div>
+                            <div id="andrew" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/andrew.jpg");'></div>
+                            <div id="enoch" class='thumb' style='background-image: url("/imgs/party-small/groomsmen/enoch.jpg");'></div>      
+                        </div>     
+</div>
+</div>
+            </div>
+        </div>
+
+        <div id='right-overlay--party'
+             class='right-side
+                    padding-0
+                    hidden
+                    opacity-0
+                    overlay'>
+            
+                <div id='spotlight-image'
+                     class='transition'> 
+                    <img id="cover-image" src="slideshow-small/5.jpg"> 
+                </div>
+            
+                <div id = 'wedding-party-detail-content'
+                  class = 'padding-80'>
+                    
+                    <div id = 'wedding-party-h1'
+                        class = 'no-margin-bottom'>
+                        
+                        <p>Wedding Party</p>
+                    
+                    </div>
+                    
+                    <div id = 'bio'
+                      class = 'party-detail'>
+                        
+                        <h2>Allow us to introduce some special people.</h2>
+                        <p>Take a moment to meet the friends and family that make up our wedding party! We think they're pretty great.</p>
+                        
+                    </div>
+                </div> 
+            </div>
+    <!--  END WEDDING PARTY -->
+    
         
+    <!--  RSVP FORM  -->
+        <div id='right-overlay--rsvp'
+             class='right-side
+                    padding-0
+                    hidden
+                    white-bg
+                    opacity-0
+                    overlay'></div>
+    <!--  END RSVP FORM -->
+        <div id = 'left-overlay--rsvp'
+          class = 'left-side
+                   padding-60
+                   no-bg
+                   hidden
+                   transition
+                   overlay'>
+            
+            <form id = 'rsvp-form'
+               class = 'white-bg
+                        wh-100
+                        rad-5
+                        padding-60
+                        shadow
+                        transition
+                        up'>
+                    <div    id = 'close-rsvp'
+                         class = 'close-btn' 
+                            >
+                            <i class="material-icons">clear</i>
+                    </div>
+                    <div class="copy-block" style="margin-top: 60px;">
+                        <h3 style="letter-spacing:.3px; margin-top:40px; margin-bottom:40px;">
+                            <span id="rsvp-header">Kindly Respond</span>
+                        </h3>
+                    </div>
+                    <div id="input-field">
+                        <fieldset class="mt-20">
+                            <label>Guest names<span class="asterisk">*</span></label>
+                            <input name="names" title="What's your first name?" type="text" autocomplete="given-name" required="required">
+                        </fieldset>
+                        <fieldset id="input-field">
+                            <label>Email<span class="asterisk">*</span></label>
+                            <br>
+                            <input name="email" title="What's your email address?" type="text" autocomplete="email" required="required">
+                        </fieldset>
+                    </div>
+                    <fieldset id="attending" class="mt-20">
+                        <label>Will you be attending?</label>
+                        <select name="attending" class="cs-select cs-skin-border">
+                            <option value="" disabled selected>Please select an option.</option>
+                            <option value="Yes">I/we would love to come!</option>
+                            <option value="No">Sorry, I/we can't make it.</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="mt-20">
+                            <label>Do you have any food requirements/allergies?<span class="asterisk">*</span></label>
+                            <input name="allergies" title="For example, vegan/vegetarian/gluten-free/peanute allergy" type="text" autocomplete="">
+                    </fieldset>
+                    <fieldset id="shuttle-field" class="mt-20">
+                        <label>Do you need a ride on the shuttle?</label>
+                        <select name="shuttle" class="cs-select cs-skin-border">
+                            <option value="" disabled selected>Please select an option.</option>
+                            <option value="Shuttle-Yes">Yes, please!</option>
+                            <option value="Shuttle-No">No, thanks.</option>
+                        </select>
+                    </fieldset>
+                    <fieldset id="shuttle-seats" class="mt-20" style="display:none">
+                        <label>How many shuttle seats do you need?</label>
+                        <br>
+                        <input name="seats" title="How many shuttle seats do you need?" type="text" autocomplete="">
+                    </fieldset>
+                    <fieldset id="hotel-field" class="mt-20">
+                        <label>Where do you want to pick it up?</label>
+                        <select name="pickup" class="cs-select cs-skin-border">
+                            <option value="" disabled selected>Please select an option.</option>
+                            <option value="Hotel Petaluma">Hotel Petaluma</option>
+                            <option value="Sheraton Sonoma County">Sheraton Sonoma County</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="mt-20">
+                            <label>Any song requests?</label>
+                            <input name="songs" title="Send us your jams" type="text" autocomplete="">
+                    </fieldset>
+                    <script src="js/classie.js"></script>
+                    <script src="js/selectFx.js"></script>
+                    <script>
+                        
+                        $('#hotel-field').hide();
+                        function changelogic(val) {
+                            if(val === "Shuttle-Yes") {
+                                $('input[name=seats]').prop('required', true);
+                                $('#shuttle-seats').show();
+                                $('#hotel-field').show();
+                            }
+                            if(val === "Shuttle-No") {
+                               $('input[name=seats]').prop('required', false);
+                                $('#shuttle-seats').hide();
+                                $('#hotel-field').hide();
+                            }
+                        }
+                        (function() {
+                            [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+                                new SelectFx(el, {onChange: changelogic});
+                            } );
+                        })();
+                    </script>
+                
+                
+                
+<!--
+                    <fieldset id="input-field">
+                        <label>Address</label>
+                        <br>
+                        <textarea name="message" rows="4" cols="50" autocomplete='street-address'></textarea>
+                    </fieldset>
+-->
+                    <div class="form-actions">
+                        <button type="submit" class="button" id="submit-form" form="rsvp-form">
+                            SUBMIT
+                        </button>
+                    </div>
+            </form>
+        </div>
         
-        
+
     <!--  LEFT SIDE  -->
-        <div class="left-box">
+        <div class="left-box embiggen">
+            <i class="material-icons" id='hamburger'>menu</i>
+            <div class='header-nav'>
+                <ul>
+                    <li id='nav-rsvp'>RSVP</li>
+                    <li id='nav-photos'>Photos</li>
+                    <li id='nav-registry'>Registry</li>
+                    <li id='nav-party'>Party</li>
+                    <li id='nav-faq'>FAQ</li>
+                </ul>
+            </div>
             <div class="image-container">
-                <img id="img1" src="imgs/home-alt/2.jpg">
-                <img id="img2" style="display: none;" src="imgs/home-alt/1.jpg">
-                <img id="img3" style="display: none;" src="imgs/home-alt/3.jpg">
-                <img id="img4" style="display: none;" src="imgs/home-alt/4.jpg">
+                <img id="img1" src="imgs/home/2.jpg">
+                <img id="img2" style="display: none;" src="imgs/home/1.jpg">
+                <img id="img3" style="display: none;" src="imgs/home/3.jpg">
+                <img id="img4" style="display: none;" src="imgs/home/4.jpg">
+                <img id="img5" style="display: none;" src="imgs/home/5.jpg">
             </div>
             <div class="vertical-center-left">
                 <div class="title-block">
@@ -39,105 +281,16 @@
             
             
             
-    <!--  RSVP FORM  -->
-            <div class="left-side-takeover-container" id="rsvp-form-container">
-                <form class="left-side-takeover-content" id="rsvp-form" stlye='visibility: none'>
-                        <div class="close-btn" id="close-rsvp">
-                            <img src="x.svg">
-                        </div>
-                        <div class="copy-block" style="margin-top: 60px;">
-                            <h3 style="letter-spacing:.3px; margin-top:40px; margin-bottom:40px;">
-                                <h3>Let us know how we can contact you!</h3><p style="text-align: center;max-width:none;">Please fill in the fields below so we know where to send your invitation.</p>
-                            </h3>
-                        </div>
-                        <fieldset id="input-field">
-                            <label>Email<span class="asterisk">*</span></label>
-                            <br>
-                            <input name="email" title="What's your email address?" type="text" autocomplete="email" required="required">
-                        </fieldset>
-                        <div id="input-field">
-                            <label>Name<span class="asterisk">*</span></label>
-                            <div class="side-by-side">
-                                <fieldset class="two-column-left">
-                                    <input name="first" title="What's your first name?" type="text" autocomplete="given-name" required="required">
-                                    <span class="sub-text">First Name</span>
-                                </fieldset>
-                                <fieldset class="two-column-right">
-                                    <input name="last" title="What's your last name?" type="text" autocomplete="family-name" required="required">
-                                    <span class="sub-text">Last Name</span>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <!-- <fieldset id="input-field">
-                            <label>Are you attending?<span class="asterisk">*</span></label>
-                            <input name="attending" title="Are you attending?" type="text" required="required">
-                        </fieldset> -->
-                        <fieldset id="input-field">
-                            <label>Address</label>
-                            <br>
-                            <textarea name="message" rows="4" cols="50" autocomplete='street-address'></textarea>
-                        </fieldset>
-                        <div class="form-actions">
-                            <button type="submit" class="button" id="submit-form" form="rsvp-form">
-                                SUBMIT
-                            </button>
-                        </div>
-                </form>
-            </div>
-    <!--  END RSVP FORM -->
-
-            
-            
-    <!-- WEDDING PARTY -->
-            <div class="left-side-takeover-container" id="wedding-party-container" style='visibility:none'>
-                <div class="left-side-takeover-content" id="wedding-party-content" style='visibility:none'>
-                        <div class="close-btn" id="close-party">
-                            <img src="x.svg">
-                        </div>
-                        <div class="copy-block">
-                            <h1 style="margin-left:0!important; margin-bottom: 40px;">WEDDING PARTY</h1>
-                        </div>
-                        <span class="party-detail-name">Bridesmaids</span>
-                        <div class="image-grid">
-                            <img id="kelly" src="imgs/small/kelly.jpg">
-                            <img id="isabel" src="imgs/small/isabel.jpg">
-                            <img id="christine" src="imgs/small/isabel.jpg">
-                            <img id="andi" src="imgs/small/isabel.jpg">
-                            <img id="leah" src="imgs/small/isabel.jpg">
-                            <img id="sara" src="imgs/small/isabel.jpg">
-                            <img id="tiffanie" src="imgs/small/isabel.jpg">
-                            <img id="katya" src="imgs/small/isabel.jpg">
-                            <img id="madeleine" src="imgs/small/isabel.jpg">
-                        </div>
-                    <br>
-                        <span class="party-detail-name">Groomsmen</span>
-                        <div class="image-grid">
-                            <img id="nick" src= imgs/small/nick.jpg>
-                            <img id="daniel" src= imgs/small/nick.jpg>
-                            <img id="dash" src= imgs/small/nick.jpg>
-                            <img id="chris" src= imgs/small/nick.jpg>
-                            <img id="eric" src= imgs/small/nick.jpg>
-                            <img id="kyle" src= imgs/small/nick.jpg>
-                            <img id="dave" src= imgs/small/nick.jpg>
-                            <img id="andrew" src= imgs/small/nick.jpg>
-                            <img id="enoch" src= imgs/small/nick.jpg>                            
-                        </div>
-                </div>
+                
+        </div>
+    <!--  RIGHT SIDE  -->
+        <div id="scroll-reminder">
+            <div id='scroll-text'>
+                SCROLL DOWN<br>
+                <i class="material-icons">keyboard_arrow_down</i>
             </div>
         </div>
-    <!--  END WEDDING PARTY -->
-
-
-        
-    <!--  RIGHT SIDE  -->
         <div class="right-box">
-            <div class="right-side-takeover-container" id="wedding-party-detail-container">
-                <div class="spotlight-image"> 
-                    <img id="cover-image" src="slideshow-small/5.jpg"> 
-                </div>
-                <div class="right-side-takeover-content" id="wedding-party-detail-content">
-                </div> 
-            </div>
             <div id="side-home">
                 <div class="vertical-center">
                     <span class="right-box-names">Matt & Amy</span>
@@ -146,15 +299,7 @@
                     <div class="title-date">November 3, 2018</div>
                     <div class="title-date" style="letter-spacing: .5px; font-weight: 600; margin-top:20px;">5:00 PM</div>
                     <div class="spacer"></div>
-                    <div class="button" id="rsvp-btn" style="width:180px;">
-                        STAY POSTED!
-                    </div>
-<!--
-                    <div class="button" id="party-btn" style="width:180px;">
-                        PARTY
-                    </div>
--->
-                      
+                    <div class="button" id="rsvp-btn" style="width:180px;">RSVP</div>
                 </div>
             </div>
             <div class="content-block" id="story">
@@ -191,7 +336,7 @@
                     </a>
                     <span class="caption">Pictures courtesy of Viansa Sonoma</span>
                     <div class="spacer"></div>
-                    <p><h3>Venue Location:</h3></p>
+                    <h3>Venue Location:</h3>
                     <iframe width="100%" height="300" frameborder="0" style="border:1;margin-top:2px;margin-bottom:0px;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJRV32UuOlhYARiLE6qTo2uMA&key=AIzaSyCLzYiOZsnrr4nkqTrwcZX0owRVFMZDvbs" allowfullscreen></iframe>
                 <div class="bottom-padding"></div>
             </div>
@@ -245,7 +390,7 @@
                     </p>
                     <h4>Q: What time does the ceremony start?</h4>
                     <p>
-                        Guests will arrive at 4:30PM and the ceremony will begin at 5PM.
+                        Guests will arrive at 5:00PM and the ceremony will begin at 5:30PM.
                     </p>
                     <h4>Q: When will I receive my invite?</h4>
                     <p>
@@ -272,13 +417,81 @@
                         If you have any further questions, please email Matt and Amy at hi@amyplusmatt.com
                     </p>
             </div>
-        <div style='margin-bottom:40px;'></div>
-        <div id="footer"></div>
-        <!--  END RIGHT SIDE -->
+            <div style='margin-bottom:40px;'></div>
+            <div id="footer"></div>
+        </div>
+        <!--  END RIGHT SIDE -->     
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe. 
+                 It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+
+                <!-- Container that holds slides. 
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+<!--                        <button class="pswp__button pswp__button--share" title="Share"></button>-->
+
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div> 
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
         
-        
+        <script src="js/matt-amy-wedding-website.js"></script>
+        <script src="js/click-handlers.js"></script>
+        <script src="js/scroll-behavior.js"></script>
         
     </body>
-    <script src="js/matt-amy-wedding-website.js"></script>
-    <script src="js/scroll-slideshow.js"></script>
 </html>

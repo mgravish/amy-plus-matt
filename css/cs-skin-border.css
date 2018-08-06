@@ -1,0 +1,76 @@
+div.cs-skin-border {
+	background: transparent;
+	font-size: 16px;
+    font-weight: 500;
+	width: 100%
+}
+
+@media screen and (max-width: 30em) {
+	div.cs-skin-border { font-size: 1em; }
+}
+
+.cs-skin-border > span {
+	border: 2px solid #E9E9E9;
+    border-radius: 3px;
+	-webkit-transition: background 0.2s, border-color 0.2s;
+	transition: background 0.2s, border-color 0.2s;
+}
+
+.cs-skin-border > span::after,
+.cs-skin-border .cs-selected span::after {
+	font-family: 'Material Icons';
+	content: 'expand_more';
+}
+
+.cs-skin-border ul span::after {
+	content: '';
+	opacity: 0;
+}
+
+.cs-selected {
+    font-weight: 700;
+}
+
+.cs-skin-border .cs-selected span::after {
+    font-family: 'Material Icons';
+	content: "check";
+	color: black;
+	font-size: 1.5em;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+    float: left;
+}
+
+.cs-skin-border.cs-active > span {
+	background: #fff;
+	border-color: #fff;
+	color: black;
+    border: 2px solid #F4D2BA;
+}
+
+.cs-skin-border .cs-options {
+	color: black;
+	font-size: 16px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+	transition: opacity 0.2s, visibility 0s 0.2s;
+    border: 2px solid #F4D2BA;
+    box-sizing: border-box;
+}
+
+.cs-skin-border.cs-active .cs-options {
+	opacity: 1;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.cs-skin-border ul span {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.cs-skin-border .cs-options li span:hover,
+.cs-skin-border li.cs-focus span {
+	background: #F4D2BA;
+}

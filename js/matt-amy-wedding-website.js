@@ -1,103 +1,200 @@
 /*  Menu Buttons  */
+$('#nav-photos').on('click', openPhotos);
+$('#nav-rsvp').on('click', openRSVP);
+$('#nav-party').on('click', openParty);
+$('#party-btn').on('click', openParty);
+$('#close-party').on('click', closeParty);
 
-$('#rsvp-btn').on('click', function(e) {  // Click RSVP
-        $('#rsvp-form').css('visibility','visible');
-        $('#rsvp-form').css('transform','translateY(0%)');
-        $('#rsvp-form-container').css('visibility','visible');
+$('#rsvp-btn').on('click', function(e) {  // Click RSVP 
+    openRSVP();
 });
-
 
 $('#close-rsvp').on('click', function(e) {  // Click to close RSVP
-
-        $('#rsvp-form').css('transform','translateY(-100vh)');
-        $('#rsvp-form-container').css('visibility','hidden');
-        $('#rsvp-form').css('visibility','hidden');
+    closeRSVP();
 });
 
-
-$('#party-btn').on('click', function(e) { // Click Party
+function openParty(){
+        $('#right-overlay--party').toggleClass('hidden white-bg');
+        $('#left-overlay--party').toggleClass('hidden');
     
-    //Left Side
-        $('#wedding-party-content').css('visibility','visible');
-        $('#wedding-party-content').css('transform','translateY(0%)');
-        $('#wedding-party-container').css('visibility','visible');
-    //Right Side
-        $('.right-side-takeover-container').css('visibility','visible');
-        $('.right-side-takeover-container').css('opacity','1');
+        setTimeout( function(){
+            $('#left-overlay--party').toggleClass('semi-white-bg');
+            $('#right-overlay--party').toggleClass('opacity-1');
+        }, 100);
+    
+        $('#left-content--party').toggleClass('down');
+}
+
+function closeParty(){
         
-
-});
-
-
-$('#close-party').on('click', function(e) { // Click to close party
+        $('#right-overlay--party').toggleClass('opacity-1');
+        $('#left-overlay--party').toggleClass('semi-white-bg');
     
-    //Left Side
-        $('#wedding-party-content').css('transform','translateY(-100vh)');
-        $('#wedding-party-container').css('visibility','hidden');
-        $('#wedding-party-content').css('visibility','hidden');
-    //Right Side
-        $('.right-side-takeover-container').css('visibility','hidden');
-        $('.right-side-takeover-container').css('opacity','0');
+        setTimeout( function(){
+            $('#left-overlay--party').toggleClass('hidden');
+            $('#right-overlay--party').toggleClass('hidden white-bg');
+        }, 500);
     
-});
+        $('#left-content--party').toggleClass('down');
+        $('.header-nav').toggleClass('down');
+}
 
+function openRSVP(){
+        $('#rsvp-form').toggleClass('down');
+        $('#left-overlay--rsvp').toggleClass('hidden');
+        $('#right-overlay--rsvp').toggleClass('hidden');
+    
+        setTimeout( function(){
+            $('#right-overlay--rsvp').toggleClass('opacity-half');
+            $('#left-overlay--rsvp').toggleClass('semi-white-bg');
 
+        }, 100);
+}
 
+function closeRSVP() {
+        $('#rsvp-form').toggleClass('down');
+        $('#left-overlay--rsvp').toggleClass('semi-white-bg');
+        $('#right-overlay--rsvp').toggleClass('opacity-half');
+    
+        setTimeout( function(){
+            $('#left-overlay--rsvp').toggleClass('hidden');
+            $('#right-overlay--rsvp').toggleClass('hidden');
+        }, 100);
+}
+
+function openPhotos(){
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: 'imgs/gallery/7.jpg',
+            w: 1716,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/4.jpg',
+            w: 763,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/5.jpg',
+            w: 763,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/6.jpg',
+            w: 763,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/8.jpg',
+            w: 763,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/9.jpg',
+            w: 796,
+            h: 1193
+        },
+        {
+            src: 'imgs/gallery/10.jpg',
+            w: 763,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/11.jpg',
+            w: 1529,
+            h: 2048
+        },
+        {
+            src: 'imgs/gallery/12.jpg',
+            w: 1080,
+            h: 810
+        },
+        {
+            src: 'imgs/gallery/21.jpg',
+            w: 858,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/14.jpg',
+            w: 1000,
+            h: 1000
+        },    
+        {
+            src: 'imgs/gallery/15.jpg',
+            w: 960,
+            h: 1280
+        },
+        {
+            src: 'imgs/gallery/16.jpg',
+            w: 1280,
+            h: 960
+        },
+        {
+            src: 'imgs/gallery/17.jpg',
+            w: 1142,
+            h: 857
+        },
+        {
+            src: 'imgs/gallery/18.jpg',
+            w: 1716,
+            h: 1144
+        },
+        {
+            src: 'imgs/gallery/19.jpg',
+            w: 1142,
+            h: 854
+        },
+        {
+            src: 'imgs/gallery/20.jpg',
+            w: 1536,
+            h: 2048
+        },  
+        {
+            src: 'imgs/gallery/13.jpg',
+            w: 1320,
+            h: 990
+            
+        },  
+        {
+            src: 'imgs/gallery/22.jpg',
+            w: 720,
+            h: 1280
+        },  
+        
+        
+    ];
+
+    // define options (if needed)
+    var options = {
+        // optionName: 'option value'
+        // for example:
+        index: 0 // start at first slide
+    };
+
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+}
 
 /*  Wedding Party Image Handlers  */
 
-$('.image-grid').on('click','img',function(e){
+$('.flex-row').on('click','div',function(e){
     var partyName = this.id;
-    var name = "";
-    var content = "";
-    var title = "";
-    var source = "";
-    
-    //Kelly Bio
-    if(partyName=="kelly") {
-        var name = "Kelly Havens";
-        var title = "Matron of Honor";
-        var content = "Kelly is Amy's sister, and has been for her whole life.";
-        var source = "imgs/cover/kelly.jpg";
-    }
-    
-    //Isabel Bio
-    if(partyName=="isabel") {
-        var name = "Isabel Havens";
-        var title = "Bridesmaid";
-        var content = "Isabel is Amy's other sister. She, too, has been Amy's sister for her whole life. Especially when she was younger.";
-    }
-    
-    //Andi Bio
-    if(partyName=="andi") {
-        var name = "Andi Dommer";
-        var title = "Bridesmaid";
-        var content = "Andi is one of Amy's best friends.";
-    }
-    
-    //Leah Bio
-    if(partyName=="leah") {
-        var name = "Leah Hellerstein";
-        var title = "Bridesmaid";
-        var content = "Leah is one of Amy's best friends.";
-    }
-    
-    //Nick Bio
-    if(partyName=="nick") {
-        var name = "Nick Gravish";
-        var title = "Groomsman";
-        var content = "Nick is Matt's brother.";
-        var source = "imgs/cover/nick.jpg";
-    }
-    
+    var name = data[partyName].fullname;
+    var title = data[partyName].role;
+    var content = data[partyName].bio;
+    var source = data[partyName].source;
     
     //Click Handlers
-    $('#wedding-party-detail-content .party-detail').remove();
-    $('#wedding-party-detail-content').append("<div class='party-detail'><div class='party-detail-name'>"+name+"</div><div class='party-detail-title'>"+title+"</div><p>"+content+"</p></div>");
+    $('.flex-row div').css('opacity', '0.7');
+    $('#bio').remove();
+    $("<div class='party-detail' id='bio'><div class='party-detail-name'>"+name+"</div><div class='party-detail-title'>"+title+"</div><p>"+content+"</p></div>").hide().appendTo('#wedding-party-detail-content').fadeIn(200);    
     $('#cover-image').attr("src", source);
+    $(e.target).css('opacity','1');
 });
-
-
 
 
 /*  Form Submission Functions  */
@@ -108,24 +205,30 @@ var url = 'https://script.google.com/macros/s/AKfycbxiFy960d1e8dLsEAVOxD5pEOIlXr
 $('#rsvp-form').on('submit',function(e) {
         e.preventDefault();
         var jqxhr = $.ajax( {
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject(),
-        success: function() { 
-            var btn = $('#submit-form');
-            $(btn).attr("disabled","disabled");
-            $(btn).css({ border:"none", cursor: "auto", color: "gray"});
-            $(btn).hide();
-            $('#rsvp-btn').fadeOut('fast');
-            $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;max-width:none;'>Your RSVP has been sent.<br>Thanks!</p>").find('.response').fadeIn('slow');
-            $('#rsvp-form').find("input[type=text], textarea").prop("readonly",true);
-            $('#rsvp-form').find("input[type=text], textarea").css({ background:"#fcfcfc" });
-           setTimeout(function(){              
-                $('.left-side-takeover-content').css('transform','translateY(-100vh)');
-                $('.left-side-takeover-container').css('visibility','hidden');
-                }, 1800);
-            }
-        });
+            url: url,
+            method: "GET",
+            dataType: "json",
+            data: $form.serializeObject(),
+            success: function() {
+                var temp = $.ajax({
+                    url: 'http://lab.mgravish.com/form-validation/handler.php',
+                    method: "GET",
+                    dataType: 'json',
+                    data: $form.serializeObject(),
+                    success: function() { alert('success!'); }
+                });
+                var btn = $('#submit-form');
+                $(btn).attr("disabled","disabled");
+                $(btn).css({ border:"none", cursor: "auto", color: "gray"});
+                $(btn).hide();
+                $('#rsvp-btn').fadeOut('fast');
+                $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;max-width:none;'>Your RSVP has been sent.<br>Thanks!</p>").find('.response').fadeIn('slow');
+                $('#rsvp-form').find("input[type=text], textarea").prop("readonly",true);
+                $('#rsvp-form').find("input[type=text], textarea").css({ background:"#fcfcfc" });
+                setTimeout(function(){              
+                    closeRSVP();
+                    }, 1800);
+                }
+            });
         return false;
 });
