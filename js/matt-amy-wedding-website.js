@@ -204,6 +204,7 @@ var url = 'https://script.google.com/macros/s/AKfycbxiFy960d1e8dLsEAVOxD5pEOIlXr
 
 $('#rsvp-form').on('submit',function(e) {
         e.preventDefault();
+        var sendTo = $('input[name=email]').val();
         var jqxhr = $.ajax( {
             url: url,
             method: "GET",
@@ -211,7 +212,7 @@ $('#rsvp-form').on('submit',function(e) {
             data: $form.serializeObject(),
             success: function() {
                 var temp = $.ajax({
-                    url: 'https://ma-email-response.herokuapp.com/app/index.php',
+                    url: 'https://lab.mgravish.com/form-validation/handler.php',
                     method: "GET",
                     dataType: 'json',
                     data: $form.serializeObject(),
