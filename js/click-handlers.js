@@ -8,7 +8,6 @@ $("#nav-faq").click(function() {
     }, 2000);
 });
 
-
 $('#hamburger').click(function(){
     $('.header-nav').toggleClass('down');
 })

@@ -215,7 +215,7 @@ $('#rsvp-form').on('submit',function(e) {
                     method: "GET",
                     dataType: 'json',
                     data: $form.serializeObject(),
-                    success: function() { alert('success!'); }
+//                    success: function() { alert('success!'); }
                 });
                 var btn = $('#submit-form');
                 $(btn).attr("disabled","disabled");
