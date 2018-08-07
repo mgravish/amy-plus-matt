@@ -211,7 +211,7 @@ $('#rsvp-form').on('submit',function(e) {
             data: $form.serializeObject(),
             success: function() {
                 var temp = $.ajax({
-                    url: 'http://lab.mgravish.com/form-validation/handler.php',
+                    url: 'https://ma-email-response.herokuapp.com/app/index.php',
                     method: "GET",
                     dataType: 'json',
                     data: $form.serializeObject(),
