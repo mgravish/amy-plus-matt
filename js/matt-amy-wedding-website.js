@@ -209,7 +209,21 @@ var url = 'https://script.google.com/macros/s/AKfycbxiFy960d1e8dLsEAVOxD5pEOIlXr
 
 $('#rsvp-form').on('submit',function(e) {
         e.preventDefault();
-        var sendTo = $('input[name=email]').val();
+        if($('input[name="allergies"]')[0].value==="") {
+            $('input[name="allergies"]')[0].value="N/A";
+        }
+        if($('select[name="shuttle"]').find(":selected").text()==="Please select an option.") {
+            $('select[name="shuttle"]').val("Shuttle-No").change();
+        }
+        if($('input[name="seats"]')[0].value==="") {
+            $('input[name="seats"]')[0].value="N/A";
+        }
+        if($('select[name="pickup"]').find(":selected").text()==="Please select an option.") {
+            $('select[name="pickup"]').val("None").change();
+        }
+        if($('input[name="songs"]')[0].value==="") {
+            $('input[name="songs"]')[0].value="N/A";
+        }
         var jqxhr = $.ajax( {
             url: url,
             method: "GET",
