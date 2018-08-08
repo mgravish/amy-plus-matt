@@ -667,16 +667,16 @@ iframe {
 
 .header-nav {
     position: absolute;
-    top:0px;
-    left:0px;
+    top:20px;
+    left:20px;
     z-index: 2;
-    width: 100%;
+    width: auto;
 }
 
 .header-nav ul {
     display: flex;
-    flex-direction: row;
-    padding-left: 40px;
+    flex-direction: column;
+    padding-left: 10px;
     padding-right: 40px;
 }
 
@@ -685,15 +685,15 @@ iframe {
     list-style-type: none;
     color: white;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    text-align: center;
+    text-align: left;
     margin: 10px;
     cursor: pointer;
     transition: color 0.2s;
-    align-self: center;
+    align-self: left;
 }
 
 .header-nav li:hover {
@@ -713,6 +713,10 @@ iframe {
 #rsvp-header {
     font-family: Sacramento;
     font-size: 40px;
+}
+
+#spotlight-close {
+    display: none;
 }
 
 /*  Media Queries  */
@@ -745,6 +749,7 @@ iframe {
     }
 }
 
+
 @media screen and (max-width: 960px) {
     
     body {
@@ -766,35 +771,38 @@ iframe {
     
     .right-side {
         left:0;
-        top: 25vh;
+        padding:0px;
         width: 100%;
-        height: 75vh;
+        height: 100vh;
         overflow: scroll;
+/*        opacity: 0;*/
+        transition: transform .3s;
+        transition-timing-function: ease-in-out;
+        transform: translateX(100vw);
+    }
+    
+    #left-content--party{
+        height: inherit;
+        overflow-y: scroll;
+        padding:20px;
     }
     
     .left-side {
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 25vh;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
     }
     
     .padding-60 {
-        padding:0;
+        padding: 0px;
     }
     
     .padding-80 {
         padding: 20px;
     }
-    
-    .image-grid {
-        height: 10vh;
-    }
-    
-    #spotlight-image {
-        position: fixed;
-        top: 25vh;
-        height: 25vh;
+
+    #spotlight-close {
+        display: block;
     }
     
     #wedding-party-h1 p {
@@ -823,24 +831,32 @@ iframe {
     #wedding-party-detail-content {
         position: fixed;
         padding-top:0;
-        top: 50vh;
-        height: 50vh;
         overflow: scroll;
     }
     
     .flex-row {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+        flex-wrap: wrap;
+        height: 100%;
     }
     
     .flex-col {
         justify-content:flex-start;
+        flex-shrink: 0;
+        height: calc(100% - 30px);
+
     }
     
+    .image-grid {
+        height: calc(100% - 25px);
+        max-height: 70%;
+        margin-bottom: 0px;
+        flex-shrink: 1;
+    }
     .thumb {
-        width: 60px;
-        height: 60px;
-        flex: none;
+/*        width: calc(33.33vw - 16px);*/
+/*        height: calc(33.33vw - 16px);*/
+        height: 33%;
+        flex:  1  25%;
     }
     
     .close-btn {
@@ -895,11 +911,11 @@ iframe {
     .party-title {
         margin-top: 10px;
         font-size: 26px;
-        margin-left: 10px;
+        margin-left: 0px;
     }
     
     #party-header {
-        margin-left: 10px;
+        margin-left: 0px;
         padding-top: 10px;
         font-size: 12px !important;
     }
@@ -1057,33 +1073,5 @@ iframe {
 
 @media screen and (max-width: 350px) {
     
-    #spotlight-image {
-        height: 140px;
-    }
-    
-    .right-side {
-        position: fixed;
-        left:0;
-        top: 25vh;
-        width: 100%;
-        height: calc (100vh - 140px);
-        overflow: scroll;
-    }
-    
-    .left-side {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 140px;
-    }
-    
-    .thumb {
-        width: 48px;
-        height: 48px;
-    }
-    
-    .image-grid {
-        height: 10vh;
-    }
+
 }

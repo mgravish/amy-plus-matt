@@ -17,6 +17,7 @@ div.cs-select {
 
 div.cs-select:focus {
 	outline: none; /* For better accessibility add a style for this in your skin */
+    border: 2px solid #F4D2BA;
 }
 
 .cs-select select {
@@ -87,7 +88,6 @@ div.cs-active {
 
 .cs-select.cs-active .cs-options {
 	visibility: visible;
-    
 }
 
 .cs-select ul {

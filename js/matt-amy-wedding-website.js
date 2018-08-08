@@ -180,6 +180,10 @@ function openPhotos(){
 }
 
 /*  Wedding Party Image Handlers  */
+$('#spotlight-close').on('click', function(e){
+//    $('.right-side').css('opacity', '1');
+    $('.right-side').css('transform', 'translateX(100vw)');
+});
 
 $('.flex-row').on('click','div',function(e){
     var partyName = this.id;
@@ -189,6 +193,7 @@ $('.flex-row').on('click','div',function(e){
     var source = data[partyName].source;
     
     //Click Handlers
+    $('.right-side').css('transform', 'translateX(0vw)');
     $('.flex-row div').css('opacity', '0.7');
     $('#bio').remove();
     $("<div class='party-detail' id='bio'><div class='party-detail-name'>"+name+"</div><div class='party-detail-title'>"+title+"</div><p>"+content+"</p></div>").hide().appendTo('#wedding-party-detail-content').fadeIn(200);    
