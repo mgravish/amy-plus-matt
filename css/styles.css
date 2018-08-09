@@ -1,5 +1,14 @@
 /*  Global Styles */
 
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; position: relative; top: 4px; left: -6px;color: #f7c7a9 }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.schedule-item {
+    position: relative; left: -28px;
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -889,12 +898,12 @@ iframe {
     }
     
     .header-nav ul {
-        margin-top: 30px;
+        margin-top: 20px;
     }
     
     .header-nav li {
         color: #2C344C;
-        margin: 6px;
+        margin: 4px;
         font-size:18px;
         margin-left:20px;
         font-weight: 600;

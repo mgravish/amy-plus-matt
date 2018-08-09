@@ -8,6 +8,13 @@ $("#nav-faq").click(function() {
     }, 2000);
 });
 
+$("#nav-schedule").click(function() {
+//    console.log('schedule');
+    $('html, body').animate({
+        scrollTop: $("#schedule").offset().top
+    }, 2000);
+});
+
 $("#nav-hotels").click(function() {
     $('html, body').animate({
         scrollTop: $("#hotel").offset().top
