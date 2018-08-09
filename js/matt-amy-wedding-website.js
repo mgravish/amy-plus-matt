@@ -248,6 +248,11 @@ $('#rsvp-form').on('submit',function(e) {
                 setTimeout(function(){              
                     closeRSVP();
                     }, 1800);
+                },
+            error: function (jqXHR, status, err) {
+                $(btn).hide();
+                $('#rsvp-btn').fadeOut('fast');
+                $('.form-actions').append("<p class='response' style='display:none; font-size:14px; text-align: center;max-width:none;'>Uh oh. Your RSVP was not able to be submitted<br>Please contact matt@amyplusmatt.com</p>").find('.response').fadeIn('slow');
                 }
             });
         return false;
